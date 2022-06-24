@@ -20,15 +20,15 @@ router.post('/', (req, res) => {
 //GET user by id
 router.get('/:id', (req, res) => {
 	User.find({ id: req.params.id })
-		.populate('author', ['firstName', 'lastName'])
-		.then((users) => res.json({ users: users }))
+		.populate('character', ['firstName', 'lastName'])
+		.then((user) => res.json({ user: user }))
 })
 
 // PATCH user by id
 router.patch('/:id', (req, res) => {
-	User.findByIdAndUpdate(req.params.id, req.body, { new: true }).then((user) =>
-		res.json({ user: user })
-	)
+	User.findByIdAndUpdate(req.params.id, req.body, { new: true })
+		.populate('character', ['firstName', 'lastName'])
+		.then((user) => res.json({ user: user }))
 })
 
 // DELETE user by id
@@ -37,5 +37,7 @@ router.delete('/:id', (req, res) => {
 		res.json({ user: user })
 	})
 })
+
+// To Do: PATCH by ID and character ID to assign characters
 
 module.exports = router
