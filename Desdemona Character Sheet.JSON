@@ -1,0 +1,107 @@
+{
+	"serialize_version": 1,
+	"name": "Desdemona",
+	"gender": "female",
+	"stock": "man",
+	"lifepaths": [
+		["Servitude And Captive Setting", "Gifted Child", 0, null, null, null, []],
+		["Noble Court Subsetting", "Student", 0, null, null, null, [[1, "m"]]],
+		["Noble Court Subsetting", "Court Jester", 0, null, null, null, []]
+	],
+	"stats": [
+		{
+			"name": "Will",
+			"shade": "B",
+			"mentalPoints": 4,
+			"physicalPoints": 0,
+			"eitherPoints": 0
+		},
+		{
+			"name": "Perception",
+			"shade": "B",
+			"mentalPoints": 4,
+			"physicalPoints": 0,
+			"eitherPoints": 0
+		},
+		{
+			"name": "Power",
+			"shade": "B",
+			"mentalPoints": 0,
+			"physicalPoints": 4,
+			"eitherPoints": 0
+		},
+		{
+			"name": "Forte",
+			"shade": "B",
+			"mentalPoints": 0,
+			"physicalPoints": 4,
+			"eitherPoints": 0
+		},
+		{
+			"name": "Agility",
+			"shade": "B",
+			"mentalPoints": 0,
+			"physicalPoints": 4,
+			"eitherPoints": 0
+		},
+		{
+			"name": "Speed",
+			"shade": "B",
+			"mentalPoints": 0,
+			"physicalPoints": 4,
+			"eitherPoints": 0
+		}
+	],
+	"skills": {
+		"lifepath": [
+			{ "name": "Write", "lifepathPoints": 1, "generalPoints": 0 },
+			{ "name": "Read", "lifepathPoints": 1, "generalPoints": 0 },
+			{ "name": "Rule Of Law", "lifepathPoints": 1, "generalPoints": 0 },
+			{ "name": "Oratory", "lifepathPoints": 1, "generalPoints": 0 },
+			{ "name": "Doctrine", "lifepathPoints": 1, "generalPoints": 0 },
+			{ "name": "Etiquette", "lifepathPoints": 2, "generalPoints": 0 },
+			{ "name": "Sing", "lifepathPoints": 2, "generalPoints": 0 },
+			{ "name": "Sleight Of Hand", "lifepathPoints": 2, "generalPoints": 0 },
+			{ "name": "Climbing", "lifepathPoints": 1, "generalPoints": 0 },
+			{ "name": "Conspicuous", "lifepathPoints": 1, "generalPoints": 0 },
+			{ "name": "Throwing", "lifepathPoints": 1, "generalPoints": 0 },
+			{ "name": "Ugly Truth", "lifepathPoints": 2, "generalPoints": 0 }
+		],
+		"general": [
+			{ "name": "Sword", "lifepathPoints": 0, "generalPoints": 1 },
+			{ "name": "Field Dressing", "lifepathPoints": 0, "generalPoints": 1 }
+		]
+	},
+	"traits": [{ "name": "Spirit Familiar" }, { "name": "Aura Of Innocence" }],
+	"gear": [
+		{ "cost": 3, "desc": "Arms, Poor Quality" },
+		{ "cost": 1, "desc": "Clothes" }
+	],
+	"property": [],
+	"relationships": [
+		{
+			"desc": "Frank - courtier",
+			"importance": "minor",
+			"isImmedFam": false,
+			"isOtherFam": false,
+			"isRomantic": false,
+			"isForbidden": false,
+			"isHateful": true
+		}
+	],
+	"affiliations": [{ "desc": "Hunting League", "importance": "small" }],
+	"reputations": [{ "desc": "Mean", "importance": "local" }],
+	"attr_mod_questions": {
+		"Health": [
+			{ "question": "Is the character athletic and active?", "answer": true }
+		],
+		"Steel": [
+			{
+				"question": "Has the character been raised in a competitive (but non-violent) culture - sports, debate, strategy games, courting?",
+				"answer": true
+			}
+		]
+	},
+	"brutal_life_withdrawn": false,
+	"approp_weapons": {}
+}
