@@ -23,9 +23,9 @@ User.find().remove(() => {
 			]).then(() => user.save())
 		})
 		let frank = User.create({
-			firstName: 'Frank',
-			lastName: 'Generic',
-			userName: 'GFrank99'
+			firstName: 'David',
+			lastName: 'Bennette',
+			userName: 'DBennette'
 		}).then((user) => {
 			Promise.all([
 				Character.create(characterSeedData[0]).then((character) => {
@@ -40,9 +40,9 @@ User.find().remove(() => {
 			]).then(() => user.save())
 		})
 		let john = User.create({
-			firstName: 'John',
-			lastName: 'Smith',
-			userName: 'JSmith101010'
+			firstName: 'Keshava',
+			lastName: 'Betts',
+			userName: 'MeditatingMan108'
 		}).then((user) => {
 			Promise.all([
 				Character.create(characterSeedData[0]).then((character) => {
