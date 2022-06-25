@@ -18,8 +18,8 @@ router.post('/', (req, res) => {
 
 //GET character by id
 router.get('/:id', (req, res) => {
-	Character.find({ id: req.params.id }).then((characters) =>
-		res.json({ characters: characters })
+	Character.findById(req.params.id).then((character) =>
+		res.json({ character: character })
 	)
 })
 

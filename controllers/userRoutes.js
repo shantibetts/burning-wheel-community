@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
 
 //GET user by id
 router.get('/:id', (req, res) => {
-	User.find({ id: req.params.id })
+	User.findById(req.params.id)
 		.populate('characters', ['firstName', 'lastName'])
 		.then((user) => res.json({ user: user }))
 })
