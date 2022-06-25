@@ -8,7 +8,7 @@ const User = require('../models/user')
 // GET all users
 router.get('/', (req, res) => {
 	User.find()
-		.populate('character', ['firstName', 'lastName'])
+		.populate('characters', ['firstName', 'lastName'])
 		.then((users) => res.json({ users: users }))
 })
 
@@ -20,14 +20,14 @@ router.post('/', (req, res) => {
 //GET user by id
 router.get('/:id', (req, res) => {
 	User.find({ id: req.params.id })
-		.populate('character', ['firstName', 'lastName'])
+		.populate('characters', ['firstName', 'lastName'])
 		.then((user) => res.json({ user: user }))
 })
 
 // PATCH user by id
 router.patch('/:id', (req, res) => {
 	User.findByIdAndUpdate(req.params.id, req.body, { new: true })
-		.populate('character', ['firstName', 'lastName'])
+		.populate('characters', ['firstName', 'lastName'])
 		.then((user) => res.json({ user: user }))
 })
 
