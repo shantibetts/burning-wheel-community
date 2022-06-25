@@ -1,5 +1,5 @@
 //import connection
-const mongoose = require('./../db/connection')
+const mongoose = require('../db/connection')
 
 // New schema for charactesr
 const characterSchema = new mongoose.Schema({
@@ -7,9 +7,11 @@ const characterSchema = new mongoose.Schema({
 	lastName: String,
 	stock: String,
 	age: Number,
-	lifepaths: [{ name: String, setting: String, description: String }],
-	beliefs: [{ core: String, action: String, isActive: Boolean }],
-	instincts: [{ core: String, action: String }],
+	lifepaths: [{ name: String, setting: String }],
+	beliefs: [
+		{ number: Number, core: String, action: String, isActive: Boolean }
+	],
+	instincts: [{ number: Number, description: String }],
 	traits: [{ name: String, description: String, callOn: String }],
 	artha: { fate: Number, persona: Number, deeds: Number },
 	stats: {
@@ -94,7 +96,14 @@ const characterSchema = new mongoose.Schema({
 		}
 	],
 	armor: [{ location: String, armorType: String, protection: Number }],
-	gear: [{ name: String, description: String }],
+	gear: [
+		{
+			name: String,
+			description: String,
+			expendible: Boolean,
+			isexpended: Boolean
+		}
+	],
 	notes: [{ name: String, description: String }]
 })
 

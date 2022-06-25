@@ -43,8 +43,8 @@ V1: Create a MongoDB database to house character information that communicates v
 
 | Date    | Day     | Deliverable                                  | Status      |
 | ------- | ------- | -------------------------------------------- | ----------- |
-| 6/24    | Fri     | Project Plan & Create Projects               | In Progress |
-| 6/25-26 | Sat/Sun | Character Model / Character API calls        | Incomplete  |
+| 6/24    | Fri     | Project Plan & Create Projects               | Complete    |
+| 6/25-26 | Sat/Sun | Character Model / Character API calls        | In Progress |
 | 6/27    | Mon     | Fetch request + React component skeleton     | Incomplete  |
 | 6/28    | Tue     | Finish back end                              | Incomplete  |
 | 6/29    | Wed     | Finish front end components                  | Incomplete  |

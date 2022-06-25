@@ -2,8 +2,8 @@ const express = require('express')
 const router = express.Router()
 
 // Require relevant models.
-const Character = require('./../models/Character')
-const User = require('./../models/User')
+const Character = require('../models/character')
+const User = require('../models/user')
 
 // GET all users
 router.get('/', (req, res) => {

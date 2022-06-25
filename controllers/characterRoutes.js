@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 // Require relevant models.
-const Character = require('./../models/Character')
+const Character = require('../models/character')
 
 // GET all characters
 router.get('/', (req, res) => {

@@ -1,0 +1,167 @@
+[
+	{
+		"firstName": "William",
+		"lastName": "Buckley",
+		"stock": "man",
+		"age": 28,
+		"lifepaths": [{ "name": "born city", "setting": "city" }],
+		"beliefs": [
+			{
+				"number": 1,
+				"core": "I can trust Jericho",
+				"action": "I won't let Jericho out of my sight until I know more about what is going on. If I do, I will surely be lost in this new world.",
+				"isActive": true
+			}
+		],
+		"instincts": [{ "number": 1, "description": "Strike first from ambush" }],
+		"traits": [
+			{
+				"name": "Lucky",
+				"description": "You are like, super lucky",
+				"callOn": "Once per session, any roll"
+			}
+		],
+		"artha": { "fate": 3, "persona": 2, "deeds": 0 },
+		"stats": {
+			"will": ["B", 6, 0, 0, 0, 0, 4, 2, 0],
+			"perception": ["B", 4, 0, 0, 2, 0, 1, 0, 0],
+			"power": ["B", 3, 0, 0, 1, 0, 0, 2, 0],
+			"forte": ["B", 4, 0, 0, 2, 0, 1, 8, 0],
+			"agility": ["B", 4, 0, 0, 0, 0, 0, 0, 0],
+			"speed": ["B", 5, 0, 0, 0, 0, 2, 1, 0]
+		},
+		"attributes": {
+			"health": ["B", 4, 0, 0, 0, 1, 0, 0, 0],
+			"reflexes": ["B", 4, 0, 0, 0, 0, 0, 0, 0],
+			"steel": ["B", 6, 0, 0, 2, 0, 3, 2, 0],
+			"hesitation": ["B", 4, 0, 0, 0, 0, 0, 0, 0],
+			"resources": ["B", 5, 0, 0, 0, 1, 10, 12, 2],
+			"circles": ["B", 6, 0, 0, 1, 1, 8, 5, 0]
+		},
+		"skills": [{ "name": "Acting", "values": ["B", 4, 0, 0, 0, 0, 3, 0, 0] }],
+		"skillsLearning": [
+			{ "name": "Ancient History", "values": ["l", 5, 0, 0, 0, 0, 0] }
+		],
+		"relationships": [
+			{
+				"name": "Bishop Ambrose Rookwood",
+				"strength": 3,
+				"description": "Venal Priest who tolerates William because of his cheap stolen goods. Lives in the City District."
+			}
+		],
+		"affiliations": [
+			{
+				"name": "The Windmill Gang",
+				"strength": 2,
+				"description": "Group of criminals who work in the Windmill Theater by day. They have a reputation as smugglers, forgers and as a fence."
+			}
+		],
+		"aliases": [
+			{
+				"name": "Bertie Smalls",
+				"description": "Reporter at Large (Introduces himself whenever leaving). Brilliant Fake ID"
+			}
+		],
+		"titles": [
+			{
+				"name": "Captain of the Neighborhood Watch",
+				"strength": 1,
+				"description": "Leads the neighborhood watch in St Thomas parish & Leason with the Guards of Northwall"
+			}
+		],
+		"funds": [
+			{
+				"name": "Empire Minerals & Coal",
+				"strength": 5,
+				"description": "Vertical monopoly on coal, iron, steel & transportation"
+			}
+		],
+		"property": [
+			{
+				"name": "The Windmill Theater",
+				"strength": 1,
+				"description": "An old and decrepit theater"
+			}
+		],
+		"debt": [
+			{
+				"name": "business loan",
+				"strength": 1,
+				"description": "You owe some shady people..."
+			}
+		],
+		"wounds": [
+			{
+				"severity": "Light",
+				"penalty": 1,
+				"recoveryTime": 22,
+				"recoveryScale": "hours"
+			}
+		],
+		"spells": [
+			{
+				"name": "Nightmare for One",
+				"ob": 4,
+				"actions": 6,
+				"description": "Target is distracted by terrifying illusions for 1 test. Vs Perception +1 (or 2 for full combat)",
+				"origin": "Personal",
+				"element": "Air",
+				"duration": "1 test",
+				"areaOfEffect": "target",
+				"impetus": "Control"
+			}
+		],
+		"meleeWeapons": [
+			{
+				"name": "Bare Fist",
+				"weaponPower": 0,
+				"add": 2,
+				"weaponSpeed": 3,
+				"versusArmor": 0,
+				"weaponLength": "Shortest",
+				"handedness": "One handed",
+				"shade": "B"
+			}
+		],
+		"missileWeapons": [
+			{
+				"name": "Pistol",
+				"dieOfFate": ["1-4", "5", "6"],
+				"incedental": 4,
+				"mark": 8,
+				"superb": 66,
+				"versusArmor": [4, 3, 1],
+				"action": "Fire Gun",
+				"actionSpeed": 2,
+				"shade": "B",
+				"ammunition": [{ "name": "jacketed", "values": [-1, 0, 1, 0, 0] }]
+			}
+		],
+		"thrownWeapons": [
+			{
+				"name": "Throwing Knife",
+				"dieOfFate": ["1-2", "3-5", "6"],
+				"weaponPower": 1,
+				"versusArmor": 0,
+				"shade": "B"
+			}
+		],
+		"armor": [
+			{ "location": "Torso", "armorType": "Reinforced Suit", "protection": 2 }
+		],
+		"gear": [
+			{
+				"name": "Forgery Tools",
+				"description": "Tools for creating forgeries",
+				"expendible": true,
+				"isexpended": false
+			}
+		],
+		"notes": [
+			{
+				"name": "The Theater Burns",
+				"description": "William burned the theater down to cover the tracks of the demon taint."
+			}
+		]
+	}
+]
