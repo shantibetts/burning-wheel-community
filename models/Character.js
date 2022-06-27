@@ -36,13 +36,25 @@ const characterSchema = new mongoose.Schema({
 	},
 	skills: [{ name: String, values: [] }],
 	skillsLearning: [{ name: String, values: [] }],
-	relationships: [{ name: String, strength: Number, description: String }],
-	affiliations: [{ name: String, strength: Number, description: String }],
+	relationships: [
+		{ name: String, strength: Number, shade: String, description: String }
+	],
+	affiliations: [
+		{ name: String, strength: Number, shade: String, description: String }
+	],
 	aliases: [{ name: String, description: String }],
-	titles: [{ name: String, strength: Number, description: String }],
-	funds: [{ name: String, strength: Number, description: String }],
-	property: [{ name: String, strength: Number, description: String }],
-	debt: [{ name: String, strength: Number, description: String }],
+	titles: [
+		{ name: String, strength: Number, shade: String, description: String }
+	],
+	funds: [
+		{ name: String, strength: Number, shade: String, description: String }
+	],
+	property: [
+		{ name: String, strength: Number, shade: String, description: String }
+	],
+	debt: [
+		{ name: String, strength: Number, shade: String, description: String }
+	],
 	wounds: [
 		{
 			severity: String,
@@ -99,7 +111,9 @@ const characterSchema = new mongoose.Schema({
 			shade: String
 		}
 	],
-	armor: [{ location: String, armorType: String, protection: Number }],
+	armor: [
+		{ location: String, armorType: String, protection: Number, shade: String }
+	],
 	gear: [
 		{
 			name: String,

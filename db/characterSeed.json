@@ -50,6 +50,7 @@
 			{
 				"name": "Bishop Ambrose Rookwood",
 				"strength": 3,
+				"shade": "B",
 				"description": "Venal Priest who tolerates William because of his cheap stolen goods. Lives in the City District."
 			}
 		],
@@ -57,6 +58,7 @@
 			{
 				"name": "The Windmill Gang",
 				"strength": 2,
+				"shade": "B",
 				"description": "Group of criminals who work in the Windmill Theater by day. They have a reputation as smugglers, forgers and as a fence."
 			}
 		],
@@ -70,6 +72,7 @@
 			{
 				"name": "Captain of the Neighborhood Watch",
 				"strength": 1,
+				"shade": "B",
 				"description": "Leads the neighborhood watch in St Thomas parish & Leason with the Guards of Northwall"
 			}
 		],
@@ -77,6 +80,7 @@
 			{
 				"name": "Empire Minerals & Coal",
 				"strength": 5,
+				"shade": "B",
 				"description": "Vertical monopoly on coal, iron, steel & transportation"
 			}
 		],
@@ -84,6 +88,7 @@
 			{
 				"name": "The Windmill Theater",
 				"strength": 1,
+				"shade": "B",
 				"description": "An old and decrepit theater"
 			}
 		],
@@ -91,6 +96,7 @@
 			{
 				"name": "business loan",
 				"strength": 1,
+				"shade": "B",
 				"description": "You owe some shady people..."
 			}
 		],
@@ -151,7 +157,12 @@
 			}
 		],
 		"armor": [
-			{ "location": "Torso", "armorType": "Reinforced Suit", "protection": 2 }
+			{
+				"location": "Torso",
+				"armorType": "Reinforced Suit",
+				"shade": "B",
+				"protection": 2
+			}
 		],
 		"gear": [
 			{
@@ -224,6 +235,7 @@
 			{
 				"name": "Bishop Ambrose Rookwood",
 				"strength": 3,
+				"shade": "B",
 				"description": "Venal Priest who tolerates William because of his cheap stolen goods. Lives in the City District."
 			}
 		],
@@ -231,6 +243,7 @@
 			{
 				"name": "The Windmill Gang",
 				"strength": 2,
+				"shade": "B",
 				"description": "Group of criminals who work in the Windmill Theater by day. They have a reputation as smugglers, forgers and as a fence."
 			}
 		],
@@ -244,6 +257,7 @@
 			{
 				"name": "Captain of the Neighborhood Watch",
 				"strength": 1,
+				"shade": "B",
 				"description": "Leads the neighborhood watch in St Thomas parish & Leason with the Guards of Northwall"
 			}
 		],
@@ -251,6 +265,7 @@
 			{
 				"name": "Empire Minerals & Coal",
 				"strength": 5,
+				"shade": "B",
 				"description": "Vertical monopoly on coal, iron, steel & transportation"
 			}
 		],
@@ -258,6 +273,7 @@
 			{
 				"name": "The Windmill Theater",
 				"strength": 1,
+				"shade": "B",
 				"description": "An old and decrepit theater"
 			}
 		],
@@ -265,13 +281,14 @@
 			{
 				"name": "business loan",
 				"strength": 1,
+				"shade": "B",
 				"description": "You owe some shady people..."
 			}
 		],
 		"wounds": [
 			{
-				"severity": "Light",
-				"penalty": 1,
+				"severity": "Midi",
+				"penalty": 2,
 				"recoveryTime": 22,
 				"recoveryScale": "hours"
 			}
@@ -398,6 +415,7 @@
 			{
 				"name": "Bishop Ambrose Rookwood",
 				"strength": 3,
+				"shade": "B",
 				"description": "Venal Priest who tolerates William because of his cheap stolen goods. Lives in the City District."
 			}
 		],
@@ -405,6 +423,7 @@
 			{
 				"name": "The Windmill Gang",
 				"strength": 2,
+				"shade": "B",
 				"description": "Group of criminals who work in the Windmill Theater by day. They have a reputation as smugglers, forgers and as a fence."
 			}
 		],
@@ -418,6 +437,7 @@
 			{
 				"name": "Captain of the Neighborhood Watch",
 				"strength": 1,
+				"shade": "B",
 				"description": "Leads the neighborhood watch in St Thomas parish & Leason with the Guards of Northwall"
 			}
 		],
@@ -425,6 +445,7 @@
 			{
 				"name": "Empire Minerals & Coal",
 				"strength": 5,
+				"shade": "B",
 				"description": "Vertical monopoly on coal, iron, steel & transportation"
 			}
 		],
@@ -432,6 +453,7 @@
 			{
 				"name": "The Windmill Theater",
 				"strength": 1,
+				"shade": "B",
 				"description": "An old and decrepit theater"
 			}
 		],
@@ -439,12 +461,13 @@
 			{
 				"name": "business loan",
 				"strength": 1,
+				"shade": "B",
 				"description": "You owe some shady people..."
 			}
 		],
 		"wounds": [
 			{
-				"severity": "Light",
+				"severity": "Superficial",
 				"penalty": 1,
 				"recoveryTime": 22,
 				"recoveryScale": "hours"
