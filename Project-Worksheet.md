@@ -1,6 +1,6 @@
 # Burning Wheel Community App V1: Character Sheet
 
-The unoficial, online Burning Wheel Gold (+Codex) character sheet. Adapted from the Burning Wheel character sheet PDFs included with Burning Wheel Gold.
+The unofficial, online Burning Wheel Gold (+Codex) character sheet. Adapted from the Burning Wheel character sheet PDFs included with Burning Wheel Gold.
 
 V1: Create a MongoDB database to house character information that communicates via a RESTful API to a React front end which displays and edits character information according to the rules layed out in Burning Wheel Gold.
 
@@ -41,19 +41,19 @@ V1: Create a MongoDB database to house character information that communicates v
 
 ## Project Schedule
 
-| Date    | Day     | Deliverable                                  | Status      |
-| ------- | ------- | -------------------------------------------- | ----------- |
-| 6/24    | Fri     | Project Plan & Create Projects               | Complete    |
-| 6/25-26 | Sat/Sun | Character Model / Character API calls        | In Progress |
-| 6/27    | Mon     | Fetch request + React component skeleton     | Incomplete  |
-| 6/28    | Tue     | Finish back end                              | Incomplete  |
-| 6/29    | Wed     | Finish front end components                  | Incomplete  |
-| 6/30    | Thu     | Front end character CRUD integration         | Incomplete  |
-| 7/1     | Fri     | Users / Authorization                        | Incomplete  |
-| 7/2-3   | Sat/Sun | Finish Users / Authorization                 | Incomplete  |
-| 7/4     | Mon     | 4th of July Holliday                         | Incomplete  |
-| 7/5     | Tue     | About page, Character finalization / styling | Incomplete  |
-| 7/6     | Wed     | Presentations                                | Incomplete  |
+| Date    | Day     | Deliverable                                  | Status     |
+| ------- | ------- | -------------------------------------------- | ---------- |
+| 6/24    | Fri     | Project Plan & Create Projects               | Complete   |
+| 6/25-26 | Sat/Sun | Character Model / Character API calls        | Complete   |
+| 6/27    | Mon     | Fetch request + React component skeleton     | Incomplete |
+| 6/28    | Tue     | Finish back end                              | 80%        |
+| 6/29    | Wed     | Finish front end components                  | Incomplete |
+| 6/30    | Thu     | Front end character CRUD integration         | Incomplete |
+| 7/1     | Fri     | Users / Authorization                        | Incomplete |
+| 7/2-3   | Sat/Sun | Finish Users / Authorization                 | Incomplete |
+| 7/4     | Mon     | 4th of July Holliday                         | Incomplete |
+| 7/5     | Tue     | About page, Character finalization / styling | Incomplete |
+| 7/6     | Wed     | Presentations                                | Incomplete |
 
 ## Inspirations
 

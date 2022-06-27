@@ -2,6 +2,10 @@
 	{
 		"firstName": "William",
 		"lastName": "Buckley",
+		"game": "Omnisiah",
+		"dateCreated": "2022-06-11",
+		"dateEdited": "2022-06-06",
+		"isTrash": false,
 		"stock": "man",
 		"age": 28,
 		"lifepaths": [{ "name": "born city", "setting": "city" }],
@@ -167,6 +171,10 @@
 	{
 		"firstName": "Jericho",
 		"lastName": "Davenport",
+		"game": "Omnisiah",
+		"dateCreated": "2022-06-11",
+		"dateEdited": "2022-06-06",
+		"isTrash": false,
 		"stock": "man",
 		"age": 25,
 		"lifepaths": [
@@ -337,6 +345,10 @@
 	{
 		"firstName": "Percival",
 		"lastName": "Bromley-Davenport",
+		"game": "Omnisiah",
+		"dateCreated": "2022-06-11",
+		"dateEdited": "2022-06-06",
+		"isTrash": false,
 		"stock": "man",
 		"age": 22,
 		"lifepaths": [

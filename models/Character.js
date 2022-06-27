@@ -5,6 +5,10 @@ const mongoose = require('../db/connection')
 const characterSchema = new mongoose.Schema({
 	firstName: String,
 	lastName: String,
+	game: String,
+	dateCreated: Date,
+	dateEdited: Date,
+	isTrash: Boolean,
 	stock: String,
 	age: Number,
 	lifepaths: [{ name: String, setting: String }],

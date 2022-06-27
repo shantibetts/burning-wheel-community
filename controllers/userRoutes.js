@@ -24,6 +24,13 @@ router.get('/:id', (req, res) => {
 		.then((user) => res.json({ user: user }))
 })
 
+//GET user by username
+router.get('/username/:username', (req, res) => {
+	User.findOne({ userName: req.params.username })
+		.populate('characters')
+		.then((user) => res.json({ user: user }))
+})
+
 // PATCH user by id
 router.patch('/:id', (req, res) => {
 	User.findByIdAndUpdate(req.params.id, req.body, { new: true })
