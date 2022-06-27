@@ -1,7 +1,6 @@
 [
 	{
-		"firstName": "William",
-		"lastName": "Buckley",
+		"characterName": "William Buckley",
 		"game": "Omnisiah",
 		"dateCreated": "2022-06-11",
 		"dateEdited": "2022-06-06",
@@ -180,8 +179,7 @@
 		]
 	},
 	{
-		"firstName": "Jericho",
-		"lastName": "Davenport",
+		"characterName": "Jericho Davenport",
 		"game": "Omnisiah",
 		"dateCreated": "2022-06-11",
 		"dateEdited": "2022-06-06",
@@ -360,8 +358,7 @@
 		]
 	},
 	{
-		"firstName": "Percival",
-		"lastName": "Bromley-Davenport",
+		"characterName": "Percival Bromley-Davenport",
 		"game": "Omnisiah",
 		"dateCreated": "2022-06-11",
 		"dateEdited": "2022-06-06",

@@ -3,8 +3,7 @@ const mongoose = require('../db/connection')
 
 // New schema for charactesr
 const characterSchema = new mongoose.Schema({
-	firstName: String,
-	lastName: String,
+	characterName: String,
 	game: String,
 	dateCreated: Date,
 	dateEdited: Date,
