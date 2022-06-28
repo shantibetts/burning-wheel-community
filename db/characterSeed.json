@@ -41,9 +41,19 @@
 			{ "name": "resources", "values": ["B", 5, 0, 0, 0, 1, 10, 12, 2] },
 			{ "name": "circles", "values": ["B", 6, 0, 0, 1, 1, 8, 5, 0] }
 		],
-		"skills": [{ "name": "Acting", "values": ["B", 4, 0, 0, 0, 0, 3, 0, 0] }],
+		"skills": [
+			{
+				"name": "Acting",
+				"root": "will",
+				"values": ["B", 4, 0, 0, 0, 0, 3, 0, 0]
+			}
+		],
 		"skillsLearning": [
-			{ "name": "Ancient History", "values": ["l", 5, 0, 0, 0, 0, 0] }
+			{
+				"name": "Ancient History",
+				"root": "perception",
+				"values": [5, 0, 0, 0]
+			}
 		],
 		"relationships": [
 			{
@@ -225,9 +235,19 @@
 			{ "name": "resources", "values": ["B", 5, 0, 0, 0, 1, 10, 12, 2] },
 			{ "name": "circles", "values": ["B", 6, 0, 0, 1, 1, 8, 5, 0] }
 		],
-		"skills": [{ "name": "Acting", "values": ["B", 4, 0, 0, 0, 0, 3, 0, 0] }],
+		"skills": [
+			{
+				"name": "Acting",
+				"root": "will",
+				"values": ["B", 4, 0, 0, 0, 0, 3, 0, 0]
+			}
+		],
 		"skillsLearning": [
-			{ "name": "Ancient History", "values": ["l", 5, 0, 0, 0, 0, 0] }
+			{
+				"name": "Ancient History",
+				"root": "perception",
+				"values": [5, 0, 0, 0]
+			}
 		],
 		"relationships": [
 			{
@@ -404,9 +424,19 @@
 			{ "name": "resources", "values": ["B", 5, 0, 0, 0, 1, 10, 12, 2] },
 			{ "name": "circles", "values": ["B", 6, 0, 0, 1, 1, 8, 5, 0] }
 		],
-		"skills": [{ "name": "Acting", "values": ["B", 4, 0, 0, 0, 0, 3, 0, 0] }],
+		"skills": [
+			{
+				"name": "Acting",
+				"root": "will",
+				"values": ["B", 4, 0, 0, 0, 0, 3, 0, 0]
+			}
+		],
 		"skillsLearning": [
-			{ "name": "Ancient History", "values": ["l", 5, 0, 0, 0, 0, 0] }
+			{
+				"name": "Ancient History",
+				"root": "perception",
+				"values": [5, 0, 0, 0]
+			}
 		],
 		"relationships": [
 			{
