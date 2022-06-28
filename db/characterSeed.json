@@ -25,22 +25,22 @@
 			}
 		],
 		"artha": { "fate": 3, "persona": 2, "deeds": 0 },
-		"stats": {
-			"will": ["B", 6, 0, 0, 0, 0, 4, 2, 0],
-			"perception": ["B", 4, 0, 0, 2, 0, 1, 0, 0],
-			"power": ["B", 3, 0, 0, 1, 0, 0, 2, 0],
-			"forte": ["B", 4, 0, 0, 2, 0, 1, 8, 0],
-			"agility": ["B", 4, 0, 0, 0, 0, 0, 0, 0],
-			"speed": ["B", 5, 0, 0, 0, 0, 2, 1, 0]
-		},
-		"attributes": {
-			"health": ["B", 4, 0, 0, 0, 1, 0, 0, 0],
-			"reflexes": ["B", 4, 0, 0, 0, 0, 0, 0, 0],
-			"steel": ["B", 6, 0, 0, 2, 0, 3, 2, 0],
-			"hesitation": ["B", 4, 0, 0, 0, 0, 0, 0, 0],
-			"resources": ["B", 5, 0, 0, 0, 1, 10, 12, 2],
-			"circles": ["B", 6, 0, 0, 1, 1, 8, 5, 0]
-		},
+		"stats": [
+			{ "name": "will", "values": ["B", 6, 0, 0, 0, 0, 4, 2, 0] },
+			{ "name": "perception", "values": ["B", 4, 0, 0, 2, 0, 1, 0, 0] },
+			{ "name": "power", "values": ["B", 3, 0, 0, 1, 0, 0, 2, 0] },
+			{ "name": "forte", "values": ["B", 4, 0, 0, 2, 0, 1, 8, 0] },
+			{ "name": "agility", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
+			{ "name": "speed", "values": ["B", 5, 0, 0, 0, 0, 2, 1, 0] }
+		],
+		"attributes": [
+			{ "name": "health", "values": ["B", 4, 0, 0, 0, 1, 0, 0, 0] },
+			{ "name": "reflexes", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
+			{ "name": "steel", "values": ["B", 6, 0, 0, 2, 0, 3, 2, 0] },
+			{ "name": "hesitation", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
+			{ "name": "resources", "values": ["B", 5, 0, 0, 0, 1, 10, 12, 2] },
+			{ "name": "circles", "values": ["B", 6, 0, 0, 1, 1, 8, 5, 0] }
+		],
 		"skills": [{ "name": "Acting", "values": ["B", 4, 0, 0, 0, 0, 3, 0, 0] }],
 		"skillsLearning": [
 			{ "name": "Ancient History", "values": ["l", 5, 0, 0, 0, 0, 0] }
@@ -209,22 +209,22 @@
 			}
 		],
 		"artha": { "fate": 3, "persona": 2, "deeds": 0 },
-		"stats": {
-			"will": ["B", 6, 0, 0, 0, 0, 4, 2, 0],
-			"perception": ["B", 4, 0, 0, 2, 0, 1, 0, 0],
-			"power": ["B", 3, 0, 0, 1, 0, 0, 2, 0],
-			"forte": ["B", 4, 0, 0, 2, 0, 1, 8, 0],
-			"agility": ["B", 4, 0, 0, 0, 0, 0, 0, 0],
-			"speed": ["B", 5, 0, 0, 0, 0, 2, 1, 0]
-		},
-		"attributes": {
-			"health": ["B", 4, 0, 0, 0, 1, 0, 0, 0],
-			"reflexes": ["B", 4, 0, 0, 0, 0, 0, 0, 0],
-			"steel": ["B", 6, 0, 0, 2, 0, 3, 2, 0],
-			"hesitation": ["B", 4, 0, 0, 0, 0, 0, 0, 0],
-			"resources": ["B", 5, 0, 0, 0, 1, 10, 12, 2],
-			"circles": ["B", 6, 0, 0, 1, 1, 8, 5, 0]
-		},
+		"stats": [
+			{ "name": "will", "values": ["B", 6, 0, 0, 0, 0, 4, 2, 0] },
+			{ "name": "perception", "values": ["B", 4, 0, 0, 2, 0, 1, 0, 0] },
+			{ "name": "power", "values": ["B", 3, 0, 0, 1, 0, 0, 2, 0] },
+			{ "name": "forte", "values": ["B", 4, 0, 0, 2, 0, 1, 8, 0] },
+			{ "name": "agility", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
+			{ "name": "speed", "values": ["B", 5, 0, 0, 0, 0, 2, 1, 0] }
+		],
+		"attributes": [
+			{ "name": "health", "values": ["B", 4, 0, 0, 0, 1, 0, 0, 0] },
+			{ "name": "reflexes", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
+			{ "name": "steel", "values": ["B", 6, 0, 0, 2, 0, 3, 2, 0] },
+			{ "name": "hesitation", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
+			{ "name": "resources", "values": ["B", 5, 0, 0, 0, 1, 10, 12, 2] },
+			{ "name": "circles", "values": ["B", 6, 0, 0, 1, 1, 8, 5, 0] }
+		],
 		"skills": [{ "name": "Acting", "values": ["B", 4, 0, 0, 0, 0, 3, 0, 0] }],
 		"skillsLearning": [
 			{ "name": "Ancient History", "values": ["l", 5, 0, 0, 0, 0, 0] }

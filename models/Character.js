@@ -17,22 +17,8 @@ const characterSchema = new mongoose.Schema({
 	instincts: [{ number: Number, description: String }],
 	traits: [{ name: String, description: String, callOn: String }],
 	artha: { fate: Number, persona: Number, deeds: Number },
-	stats: {
-		will: [],
-		perception: [],
-		power: [],
-		forte: [],
-		agility: [],
-		speed: []
-	},
-	attributes: {
-		health: [],
-		reflexes: [],
-		steel: [],
-		hesitation: [],
-		resources: [],
-		circles: []
-	},
+	stats: [{ name: String, values: [] }],
+	attributes: [{ name: String, values: [] }],
 	skills: [{ name: String, values: [] }],
 	skillsLearning: [{ name: String, values: [] }],
 	relationships: [
