@@ -12,33 +12,33 @@ const characterSchema = new mongoose.Schema({
 	age: Number,
 	lifepaths: [{ name: String, setting: String }],
 	beliefs: [
-		{ number: Number, core: String, action: String, isActive: Boolean }
+		{ name: String, description: String, action: String, isActive: Boolean }
 	],
-	instincts: [{ number: Number, description: String }],
+	instincts: [{ name: String, description: String }],
 	traits: [{ name: String, description: String, callOn: String }],
-	artha: { fate: Number, persona: Number, deeds: Number },
+	artha: [],
 	stats: [{ name: String, values: [] }],
 	attributes: [{ name: String, values: [] }],
 	skills: [{ name: String, root1: String, root2: String, values: [] }],
 	skillsLearning: [{ name: String, root1: String, root2: String, values: [] }],
 	relationships: [
-		{ name: String, strength: Number, shade: String, description: String }
+		{ name: String, exponent: Number, shade: String, description: String }
 	],
 	affiliations: [
-		{ name: String, strength: Number, shade: String, description: String }
+		{ name: String, exponent: Number, shade: String, description: String }
 	],
 	aliases: [{ name: String, description: String }],
 	titles: [
-		{ name: String, strength: Number, shade: String, description: String }
+		{ name: String, exponent: Number, shade: String, description: String }
 	],
 	funds: [
-		{ name: String, strength: Number, shade: String, description: String }
+		{ name: String, exponent: Number, shade: String, description: String }
 	],
 	property: [
-		{ name: String, strength: Number, shade: String, description: String }
+		{ name: String, exponent: Number, shade: String, description: String }
 	],
 	debt: [
-		{ name: String, strength: Number, shade: String, description: String }
+		{ name: String, exponent: Number, shade: String, description: String }
 	],
 	wounds: [
 		{
