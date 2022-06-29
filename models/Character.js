@@ -19,8 +19,8 @@ const characterSchema = new mongoose.Schema({
 	artha: { fate: Number, persona: Number, deeds: Number },
 	stats: [{ name: String, values: [] }],
 	attributes: [{ name: String, values: [] }],
-	skills: [{ name: String, root: String, values: [] }],
-	skillsLearning: [{ name: String, root: String, values: [] }],
+	skills: [{ name: String, root1: String, root2: String, values: [] }],
+	skillsLearning: [{ name: String, root1: String, root2: String, values: [] }],
 	relationships: [
 		{ name: String, strength: Number, shade: String, description: String }
 	],

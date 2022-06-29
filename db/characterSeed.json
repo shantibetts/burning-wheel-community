@@ -7,7 +7,7 @@
 		"isTrash": false,
 		"stock": "man",
 		"age": 28,
-		"lifepaths": [{ "name": "born city", "setting": "city" }],
+		"lifepaths": [{ "name": "Born City", "setting": "City" }],
 		"beliefs": [
 			{
 				"number": 1,
@@ -44,15 +44,50 @@
 		"skills": [
 			{
 				"name": "Acting",
-				"root": "will",
+				"root1": "will",
 				"values": ["B", 4, 0, 0, 0, 0, 3, 0, 0]
+			},
+			{
+				"name": "Demonology",
+				"root1": "perception",
+				"values": ["B", 2, 0, 0, 0, 0, 0, 0, 0]
+			},
+			{
+				"name": "Forgery",
+				"root1": "perception",
+				"values": ["B", 4, 0, 0, 0, 0, 3, 0, 0]
+			},
+			{
+				"name": "Ettiquette",
+				"root1": "will",
+				"values": ["B", 3, 0, 2, 0, 1, 0, 0, 0]
+			},
+			{
+				"name": "Intimidation",
+				"root1": "will",
+				"values": ["B", 5, 0, 0, 2, 1, 3, 1, 0]
+			},
+			{
+				"name": "Persuasion",
+				"root1": "will",
+				"values": ["B", 5, 0, 0, 0, 1, 22, 18, 0]
 			}
 		],
 		"skillsLearning": [
 			{
 				"name": "Ancient History",
-				"root": "perception",
+				"root1": "perception",
 				"values": [5, 0, 0, 0]
+			},
+			{
+				"name": "Brawling",
+				"root1": "agility",
+				"values": [4, 0, 0, 0]
+			},
+			{
+				"name": "Conspicuous",
+				"root1": "will",
+				"values": [1, 0, 0, 0]
 			}
 		],
 		"relationships": [
@@ -197,8 +232,8 @@
 		"stock": "man",
 		"age": 25,
 		"lifepaths": [
-			{ "name": "born noble", "setting": "noble" },
-			{ "name": "page", "setting": "noble" }
+			{ "name": "Born Noble", "setting": "Noble" },
+			{ "name": "Page", "setting": "Noble" }
 		],
 		"beliefs": [
 			{
@@ -237,16 +272,22 @@
 		],
 		"skills": [
 			{
-				"name": "Acting",
-				"root": "will",
+				"name": "Intimidation",
+				"root1": "will",
+				"values": ["B", 6, 0, 2, 1, 0, 6, 8, 0]
+			},
+			{
+				"name": "Pistol",
+				"root1": "perception",
+				"root2": "agility",
 				"values": ["B", 4, 0, 0, 0, 0, 3, 0, 0]
 			}
 		],
 		"skillsLearning": [
 			{
-				"name": "Ancient History",
-				"root": "perception",
-				"values": [5, 0, 0, 0]
+				"name": "Falsehood",
+				"root1": "will",
+				"values": [1, 0, 0, 0]
 			}
 		],
 		"relationships": [
@@ -386,8 +427,8 @@
 		"stock": "man",
 		"age": 22,
 		"lifepaths": [
-			{ "name": "born noble", "setting": "noble" },
-			{ "name": "student", "setting": "city" }
+			{ "name": "Born Noble", "setting": "Noble" },
+			{ "name": "Student", "setting": "City" }
 		],
 		"beliefs": [
 			{
@@ -426,16 +467,26 @@
 		],
 		"skills": [
 			{
-				"name": "Acting",
-				"root": "will",
-				"values": ["B", 4, 0, 0, 0, 0, 3, 0, 0]
+				"name": "Investigation-wise",
+				"root1": "perception",
+				"values": ["B", 4, 1, 2, 0, 0, 3, 0, 0]
+			},
+			{
+				"name": "Observation",
+				"root1": "perception",
+				"values": ["B", 4, 0, 3, 1, 0, 3, 0, 0]
 			}
 		],
 		"skillsLearning": [
 			{
 				"name": "Ancient History",
-				"root": "perception",
-				"values": [5, 0, 0, 0]
+				"root1": "perception",
+				"values": [5, 1, 2, 0]
+			},
+			{
+				"name": "Church-wise",
+				"root1": "perception",
+				"values": [1, 1, 1, 0]
 			}
 		],
 		"relationships": [
