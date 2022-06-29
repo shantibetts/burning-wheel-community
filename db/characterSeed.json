@@ -28,67 +28,67 @@
 		],
 		"artha": [3, 2, 0],
 		"stats": [
-			{ "name": "will", "values": ["B", 6, 0, 0, 0, 0, 4, 2, 0] },
-			{ "name": "perception", "values": ["B", 4, 0, 0, 2, 0, 1, 0, 0] },
-			{ "name": "power", "values": ["B", 3, 0, 0, 1, 0, 0, 2, 0] },
-			{ "name": "forte", "values": ["B", 4, 0, 0, 2, 0, 1, 8, 0] },
-			{ "name": "agility", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "speed", "values": ["B", 5, 0, 0, 0, 0, 2, 1, 0] }
+			{ "name": "Will", "values": ["B", 6, 0, 0, 0, 0, 4, 2, 0] },
+			{ "name": "Perception", "values": ["B", 4, 0, 0, 2, 0, 1, 0, 0] },
+			{ "name": "Power", "values": ["B", 3, 0, 0, 1, 0, 0, 2, 0] },
+			{ "name": "Forte", "values": ["B", 4, 0, 0, 2, 0, 1, 8, 0] },
+			{ "name": "Agility", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
+			{ "name": "Speed", "values": ["B", 5, 0, 0, 0, 0, 2, 1, 0] }
 		],
 		"attributes": [
-			{ "name": "health", "values": ["B", 4, 0, 0, 0, 1, 0, 0, 0] },
-			{ "name": "reflexes", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "steel", "values": ["B", 6, 0, 0, 2, 0, 3, 2, 0] },
-			{ "name": "hesitation", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "resources", "values": ["B", 5, 0, 0, 0, 1, 10, 12, 2] },
-			{ "name": "circles", "values": ["B", 6, 0, 0, 1, 1, 8, 5, 0] }
+			{ "name": "Health", "values": ["B", 4, 0, 0, 0, 1, 0, 0, 0] },
+			{ "name": "Reflexes", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
+			{ "name": "Steel", "values": ["B", 6, 0, 0, 2, 0, 3, 2, 0] },
+			{ "name": "Hesitation", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
+			{ "name": "Resources", "values": ["B", 5, 0, 0, 0, 1, 10, 12, 2] },
+			{ "name": "Circles", "values": ["B", 6, 0, 0, 1, 1, 8, 5, 0] }
 		],
 		"skills": [
 			{
 				"name": "Acting",
-				"root1": "will",
+				"root1": "Will",
 				"values": ["B", 4, 0, 0, 0, 0, 3, 0, 0]
 			},
 			{
 				"name": "Demonology",
-				"root1": "perception",
+				"root1": "Perception",
 				"values": ["B", 2, 0, 0, 0, 0, 0, 0, 0]
 			},
 			{
 				"name": "Forgery",
-				"root1": "perception",
+				"root1": "Perception",
 				"values": ["B", 4, 0, 0, 0, 0, 3, 0, 0]
 			},
 			{
 				"name": "Ettiquette",
-				"root1": "will",
+				"root1": "Will",
 				"values": ["B", 3, 0, 2, 0, 1, 0, 0, 0]
 			},
 			{
 				"name": "Intimidation",
-				"root1": "will",
+				"root1": "Will",
 				"values": ["B", 5, 0, 0, 2, 1, 3, 1, 0]
 			},
 			{
 				"name": "Persuasion",
-				"root1": "will",
+				"root1": "Will",
 				"values": ["B", 5, 0, 0, 0, 1, 22, 18, 0]
 			}
 		],
 		"skillsLearning": [
 			{
 				"name": "Ancient History",
-				"root1": "perception",
+				"root1": "Perception",
 				"values": [5, 0, 0, 0]
 			},
 			{
 				"name": "Brawling",
-				"root1": "agility",
+				"root1": "Agility",
 				"values": [4, 0, 0, 0]
 			},
 			{
 				"name": "Conspicuous",
-				"root1": "will",
+				"root1": "Will",
 				"values": [1, 0, 0, 0]
 			}
 		],
@@ -240,7 +240,7 @@
 		"beliefs": [
 			{
 				"name": "Belief 1",
-				"description": "Circles are power. In this city it's often not what you know, but who you know.",
+				"description": "Circles are Power. In this city it's often not what you know, but who you know.",
 				"action": "As soon as the ritual is completed, I need to find us a Korian guide to help us sneak into the concert without raising any alarms.",
 				"isActive": true
 			}
@@ -260,38 +260,38 @@
 		],
 		"artha": [3, 2, 0],
 		"stats": [
-			{ "name": "will", "values": ["B", 6, 0, 0, 0, 0, 4, 2, 0] },
-			{ "name": "perception", "values": ["B", 4, 0, 0, 2, 0, 1, 0, 0] },
-			{ "name": "power", "values": ["B", 3, 0, 0, 1, 0, 0, 2, 0] },
-			{ "name": "forte", "values": ["B", 4, 0, 0, 2, 0, 1, 8, 0] },
-			{ "name": "agility", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "speed", "values": ["B", 5, 0, 0, 0, 0, 2, 1, 0] }
+			{ "name": "Will", "values": ["B", 6, 0, 0, 0, 0, 4, 2, 0] },
+			{ "name": "Perception", "values": ["B", 4, 0, 0, 2, 0, 1, 0, 0] },
+			{ "name": "Power", "values": ["B", 3, 0, 0, 1, 0, 0, 2, 0] },
+			{ "name": "Forte", "values": ["B", 4, 0, 0, 2, 0, 1, 8, 0] },
+			{ "name": "Agility", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
+			{ "name": "Speed", "values": ["B", 5, 0, 0, 0, 0, 2, 1, 0] }
 		],
 		"attributes": [
-			{ "name": "health", "values": ["B", 4, 0, 0, 0, 1, 0, 0, 0] },
-			{ "name": "reflexes", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "steel", "values": ["B", 6, 0, 0, 2, 0, 3, 2, 0] },
-			{ "name": "hesitation", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "resources", "values": ["B", 5, 0, 0, 0, 1, 10, 12, 2] },
-			{ "name": "circles", "values": ["B", 6, 0, 0, 1, 1, 8, 5, 0] }
+			{ "name": "Health", "values": ["B", 4, 0, 0, 0, 1, 0, 0, 0] },
+			{ "name": "Reflexes", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
+			{ "name": "Steel", "values": ["B", 6, 0, 0, 2, 0, 3, 2, 0] },
+			{ "name": "Hesitation", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
+			{ "name": "Resources", "values": ["B", 5, 0, 0, 0, 1, 10, 12, 2] },
+			{ "name": "Circles", "values": ["B", 6, 0, 0, 1, 1, 8, 5, 0] }
 		],
 		"skills": [
 			{
 				"name": "Intimidation",
-				"root1": "will",
+				"root1": "Will",
 				"values": ["B", 6, 0, 2, 1, 0, 6, 8, 0]
 			},
 			{
 				"name": "Pistol",
-				"root1": "perception",
-				"root2": "agility",
+				"root1": "Perception",
+				"root2": "Agility",
 				"values": ["B", 4, 0, 0, 0, 0, 3, 0, 0]
 			}
 		],
 		"skillsLearning": [
 			{
 				"name": "Falsehood",
-				"root1": "will",
+				"root1": "Will",
 				"values": [1, 0, 0, 0]
 			}
 		],
@@ -458,42 +458,42 @@
 		],
 		"artha": [3, 2, 0],
 		"stats": [
-			{ "name": "will", "values": ["B", 6, 0, 0, 0, 0, 4, 2, 0] },
-			{ "name": "perception", "values": ["B", 4, 0, 0, 2, 0, 1, 0, 0] },
-			{ "name": "power", "values": ["B", 3, 0, 0, 1, 0, 0, 2, 0] },
-			{ "name": "forte", "values": ["B", 4, 0, 0, 2, 0, 1, 8, 0] },
-			{ "name": "agility", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "speed", "values": ["B", 5, 0, 0, 0, 0, 2, 1, 0] }
+			{ "name": "Will", "values": ["B", 6, 0, 0, 0, 0, 4, 2, 0] },
+			{ "name": "Perception", "values": ["B", 4, 0, 0, 2, 0, 1, 0, 0] },
+			{ "name": "Power", "values": ["B", 3, 0, 0, 1, 0, 0, 2, 0] },
+			{ "name": "Forte", "values": ["B", 4, 0, 0, 2, 0, 1, 8, 0] },
+			{ "name": "Agility", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
+			{ "name": "Speed", "values": ["B", 5, 0, 0, 0, 0, 2, 1, 0] }
 		],
 		"attributes": [
-			{ "name": "health", "values": ["B", 4, 0, 0, 0, 1, 0, 0, 0] },
-			{ "name": "reflexes", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "steel", "values": ["B", 6, 0, 0, 2, 0, 3, 2, 0] },
-			{ "name": "hesitation", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "resources", "values": ["B", 5, 0, 0, 0, 1, 10, 12, 2] },
-			{ "name": "circles", "values": ["B", 6, 0, 0, 1, 1, 8, 5, 0] }
+			{ "name": "Health", "values": ["B", 4, 0, 0, 0, 1, 0, 0, 0] },
+			{ "name": "Reflexes", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
+			{ "name": "Steel", "values": ["B", 6, 0, 0, 2, 0, 3, 2, 0] },
+			{ "name": "Hesitation", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
+			{ "name": "Resources", "values": ["B", 5, 0, 0, 0, 1, 10, 12, 2] },
+			{ "name": "Circles", "values": ["B", 6, 0, 0, 1, 1, 8, 5, 0] }
 		],
 		"skills": [
 			{
 				"name": "Investigation-wise",
-				"root1": "perception",
+				"root1": "Perception",
 				"values": ["B", 4, 1, 2, 0, 0, 3, 0, 0]
 			},
 			{
 				"name": "Observation",
-				"root1": "perception",
+				"root1": "Perception",
 				"values": ["B", 4, 0, 3, 1, 0, 3, 0, 0]
 			}
 		],
 		"skillsLearning": [
 			{
 				"name": "Ancient History",
-				"root1": "perception",
+				"root1": "Perception",
 				"values": [5, 1, 2, 0]
 			},
 			{
 				"name": "Church-wise",
-				"root1": "perception",
+				"root1": "Perception",
 				"values": [1, 1, 1, 0]
 			}
 		],
