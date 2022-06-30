@@ -28,68 +28,220 @@
 		],
 		"artha": [3, 2, 0],
 		"stats": [
-			{ "name": "Will", "values": ["B", 6, 0, 0, 0, 0, 4, 2, 0] },
-			{ "name": "Perception", "values": ["B", 4, 0, 0, 2, 0, 1, 0, 0] },
-			{ "name": "Power", "values": ["B", 3, 0, 0, 1, 0, 0, 2, 0] },
-			{ "name": "Forte", "values": ["B", 4, 0, 0, 2, 0, 1, 8, 0] },
-			{ "name": "Agility", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "Speed", "values": ["B", 5, 0, 0, 0, 0, 2, 1, 0] }
+			{
+				"name": "Will",
+				"shade": "B",
+				"exponent": 6,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 4,
+				"persona": 2,
+				"deeds": 0
+			},
+			{
+				"name": "Perception",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 2,
+				"challenging": 0,
+				"fate": 1,
+				"persona": 0,
+				"deeds": 0
+			},
+			{
+				"name": "Power",
+				"shade": "B",
+				"exponent": 3,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 1,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 2,
+				"deeds": 0
+			},
+			{
+				"name": "Forte",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 2,
+				"challenging": 0,
+				"fate": 1,
+				"persona": 8,
+				"deeds": 0
+			},
+			{
+				"name": "Agility",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0
+			},
+			{
+				"name": "Speed",
+				"shade": "B",
+				"exponent": 5,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 2,
+				"persona": 1,
+				"deeds": 0
+			}
 		],
 		"attributes": [
-			{ "name": "Health", "values": ["B", 4, 0, 0, 0, 1, 0, 0, 0] },
-			{ "name": "Reflexes", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "Steel", "values": ["B", 6, 0, 0, 2, 0, 3, 2, 0] },
-			{ "name": "Hesitation", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "Resources", "values": ["B", 5, 0, 0, 0, 1, 10, 12, 2] },
-			{ "name": "Circles", "values": ["B", 6, 0, 0, 1, 1, 8, 5, 0] }
+			{
+				"name": "Health",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 1,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0
+			},
+			{
+				"name": "Reflexes",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0
+			},
+			{
+				"name": "Steel",
+				"shade": "B",
+				"exponent": 6,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 2,
+				"challenging": 0,
+				"fate": 3,
+				"persona": 2,
+				"deeds": 0
+			},
+			{
+				"name": "Hesitation",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0
+			},
+			{
+				"name": "Resources",
+				"shade": "B",
+				"exponent": 5,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 1,
+				"fate": 10,
+				"persona": 12,
+				"deeds": 2
+			},
+			{
+				"name": "Circles",
+				"shade": "B",
+				"exponent": 6,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 1,
+				"challenging": 1,
+				"fate": 8,
+				"persona": 5,
+				"deeds": 0
+			}
 		],
 		"skills": [
 			{
 				"name": "Acting",
-				"root1": "Will",
-				"values": ["B", 4, 0, 0, 0, 0, 3, 0, 0]
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 3,
+				"persona": 0,
+				"deeds": 0,
+				"root1": "Will"
 			},
 			{
 				"name": "Demonology",
-				"root1": "Perception",
-				"values": ["B", 2, 0, 0, 0, 0, 0, 0, 0]
+				"shade": "B",
+				"exponent": 2,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0,
+				"root1": "Will"
 			},
 			{
-				"name": "Forgery",
-				"root1": "Perception",
-				"values": ["B", 4, 0, 0, 0, 0, 3, 0, 0]
-			},
-			{
-				"name": "Ettiquette",
+				"name": "Survival",
+				"shade": "B",
+				"exponent": 2,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0,
 				"root1": "Will",
-				"values": ["B", 3, 0, 2, 0, 1, 0, 0, 0]
-			},
-			{
-				"name": "Intimidation",
-				"root1": "Will",
-				"values": ["B", 5, 0, 0, 2, 1, 3, 1, 0]
-			},
-			{
-				"name": "Persuasion",
-				"root1": "Will",
-				"values": ["B", 5, 0, 0, 0, 1, 22, 18, 0]
+				"root2": "Perception"
 			}
 		],
 		"skillsLearning": [
 			{
 				"name": "Ancient History",
-				"root1": "Perception",
-				"values": [5, 0, 0, 0]
+				"routine": 5,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0,
+				"root1": "Perception"
 			},
 			{
-				"name": "Brawling",
-				"root1": "Agility",
-				"values": [4, 0, 0, 0]
+				"name": "Surgery",
+				"routine": 4,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0,
+				"root1": "Perception",
+				"root2": "Agility"
 			},
 			{
 				"name": "Conspicuous",
-				"root1": "Will",
-				"values": [1, 0, 0, 0]
+				"routine": 1,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0,
+				"root1": "Will"
 			}
 		],
 		"relationships": [
@@ -226,7 +378,7 @@
 		]
 	},
 	{
-		"characterName": "Jericho Davenport",
+		"characterName": "William Buckley Clone1",
 		"game": "Omnisiah",
 		"dateCreated": "2022-06-11",
 		"dateEdited": "2022-06-06",
@@ -260,39 +412,220 @@
 		],
 		"artha": [3, 2, 0],
 		"stats": [
-			{ "name": "Will", "values": ["B", 6, 0, 0, 0, 0, 4, 2, 0] },
-			{ "name": "Perception", "values": ["B", 4, 0, 0, 2, 0, 1, 0, 0] },
-			{ "name": "Power", "values": ["B", 3, 0, 0, 1, 0, 0, 2, 0] },
-			{ "name": "Forte", "values": ["B", 4, 0, 0, 2, 0, 1, 8, 0] },
-			{ "name": "Agility", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "Speed", "values": ["B", 5, 0, 0, 0, 0, 2, 1, 0] }
+			{
+				"name": "Will",
+				"shade": "B",
+				"exponent": 6,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 4,
+				"persona": 2,
+				"deeds": 0
+			},
+			{
+				"name": "Perception",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 2,
+				"challenging": 0,
+				"fate": 1,
+				"persona": 0,
+				"deeds": 0
+			},
+			{
+				"name": "Power",
+				"shade": "B",
+				"exponent": 3,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 1,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 2,
+				"deeds": 0
+			},
+			{
+				"name": "Forte",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 2,
+				"challenging": 0,
+				"fate": 1,
+				"persona": 8,
+				"deeds": 0
+			},
+			{
+				"name": "Agility",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0
+			},
+			{
+				"name": "Speed",
+				"shade": "B",
+				"exponent": 5,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 2,
+				"persona": 1,
+				"deeds": 0
+			}
 		],
 		"attributes": [
-			{ "name": "Health", "values": ["B", 4, 0, 0, 0, 1, 0, 0, 0] },
-			{ "name": "Reflexes", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "Steel", "values": ["B", 6, 0, 0, 2, 0, 3, 2, 0] },
-			{ "name": "Hesitation", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "Resources", "values": ["B", 5, 0, 0, 0, 1, 10, 12, 2] },
-			{ "name": "Circles", "values": ["B", 6, 0, 0, 1, 1, 8, 5, 0] }
+			{
+				"name": "Health",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 1,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0
+			},
+			{
+				"name": "Reflexes",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0
+			},
+			{
+				"name": "Steel",
+				"shade": "B",
+				"exponent": 6,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 2,
+				"challenging": 0,
+				"fate": 3,
+				"persona": 2,
+				"deeds": 0
+			},
+			{
+				"name": "Hesitation",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0
+			},
+			{
+				"name": "Resources",
+				"shade": "B",
+				"exponent": 5,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 1,
+				"fate": 10,
+				"persona": 12,
+				"deeds": 2
+			},
+			{
+				"name": "Circles",
+				"shade": "B",
+				"exponent": 6,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 1,
+				"challenging": 1,
+				"fate": 8,
+				"persona": 5,
+				"deeds": 0
+			}
 		],
 		"skills": [
 			{
-				"name": "Intimidation",
-				"root1": "Will",
-				"values": ["B", 6, 0, 2, 1, 0, 6, 8, 0]
+				"name": "Acting",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 3,
+				"persona": 0,
+				"deeds": 0,
+				"root1": "Will"
 			},
 			{
-				"name": "Pistol",
-				"root1": "Perception",
-				"root2": "Agility",
-				"values": ["B", 4, 0, 0, 0, 0, 3, 0, 0]
+				"name": "Demonology",
+				"shade": "B",
+				"exponent": 2,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0,
+				"root1": "Will"
+			},
+			{
+				"name": "Survival",
+				"shade": "B",
+				"exponent": 2,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0,
+				"root1": "Will",
+				"root2": "Perception"
 			}
 		],
 		"skillsLearning": [
 			{
-				"name": "Falsehood",
-				"root1": "Will",
-				"values": [1, 0, 0, 0]
+				"name": "Ancient History",
+				"routine": 5,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0,
+				"root1": "Perception"
+			},
+			{
+				"name": "Surgery",
+				"routine": 4,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0,
+				"root1": "Perception",
+				"root2": "Agility"
+			},
+			{
+				"name": "Conspicuous",
+				"routine": 1,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0,
+				"root1": "Will"
 			}
 		],
 		"relationships": [
@@ -424,7 +757,7 @@
 		]
 	},
 	{
-		"characterName": "Percival Bromley-Davenport",
+		"characterName": "William Buckley Clone 2",
 		"game": "Omnisiah",
 		"dateCreated": "2022-06-11",
 		"dateEdited": "2022-06-06",
@@ -458,43 +791,220 @@
 		],
 		"artha": [3, 2, 0],
 		"stats": [
-			{ "name": "Will", "values": ["B", 6, 0, 0, 0, 0, 4, 2, 0] },
-			{ "name": "Perception", "values": ["B", 4, 0, 0, 2, 0, 1, 0, 0] },
-			{ "name": "Power", "values": ["B", 3, 0, 0, 1, 0, 0, 2, 0] },
-			{ "name": "Forte", "values": ["B", 4, 0, 0, 2, 0, 1, 8, 0] },
-			{ "name": "Agility", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "Speed", "values": ["B", 5, 0, 0, 0, 0, 2, 1, 0] }
+			{
+				"name": "Will",
+				"shade": "B",
+				"exponent": 6,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 4,
+				"persona": 2,
+				"deeds": 0
+			},
+			{
+				"name": "Perception",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 2,
+				"challenging": 0,
+				"fate": 1,
+				"persona": 0,
+				"deeds": 0
+			},
+			{
+				"name": "Power",
+				"shade": "B",
+				"exponent": 3,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 1,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 2,
+				"deeds": 0
+			},
+			{
+				"name": "Forte",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 2,
+				"challenging": 0,
+				"fate": 1,
+				"persona": 8,
+				"deeds": 0
+			},
+			{
+				"name": "Agility",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0
+			},
+			{
+				"name": "Speed",
+				"shade": "B",
+				"exponent": 5,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 2,
+				"persona": 1,
+				"deeds": 0
+			}
 		],
 		"attributes": [
-			{ "name": "Health", "values": ["B", 4, 0, 0, 0, 1, 0, 0, 0] },
-			{ "name": "Reflexes", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "Steel", "values": ["B", 6, 0, 0, 2, 0, 3, 2, 0] },
-			{ "name": "Hesitation", "values": ["B", 4, 0, 0, 0, 0, 0, 0, 0] },
-			{ "name": "Resources", "values": ["B", 5, 0, 0, 0, 1, 10, 12, 2] },
-			{ "name": "Circles", "values": ["B", 6, 0, 0, 1, 1, 8, 5, 0] }
+			{
+				"name": "Health",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 1,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0
+			},
+			{
+				"name": "Reflexes",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0
+			},
+			{
+				"name": "Steel",
+				"shade": "B",
+				"exponent": 6,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 2,
+				"challenging": 0,
+				"fate": 3,
+				"persona": 2,
+				"deeds": 0
+			},
+			{
+				"name": "Hesitation",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0
+			},
+			{
+				"name": "Resources",
+				"shade": "B",
+				"exponent": 5,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 1,
+				"fate": 10,
+				"persona": 12,
+				"deeds": 2
+			},
+			{
+				"name": "Circles",
+				"shade": "B",
+				"exponent": 6,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 1,
+				"challenging": 1,
+				"fate": 8,
+				"persona": 5,
+				"deeds": 0
+			}
 		],
 		"skills": [
 			{
-				"name": "Investigation-wise",
-				"root1": "Perception",
-				"values": ["B", 4, 1, 2, 0, 0, 3, 0, 0]
+				"name": "Acting",
+				"shade": "B",
+				"exponent": 4,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 3,
+				"persona": 0,
+				"deeds": 0,
+				"root1": "Will"
 			},
 			{
-				"name": "Observation",
-				"root1": "Perception",
-				"values": ["B", 4, 0, 3, 1, 0, 3, 0, 0]
+				"name": "Demonology",
+				"shade": "B",
+				"exponent": 2,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0,
+				"root1": "Will"
+			},
+			{
+				"name": "Survival",
+				"shade": "B",
+				"exponent": 2,
+				"tax": 0,
+				"routine": 0,
+				"difficult": 0,
+				"challenging": 0,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0,
+				"root1": "Will",
+				"root2": "Perception"
 			}
 		],
 		"skillsLearning": [
 			{
 				"name": "Ancient History",
-				"root1": "Perception",
-				"values": [5, 1, 2, 0]
+				"routine": 5,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0,
+				"root1": "Perception"
 			},
 			{
-				"name": "Church-wise",
+				"name": "Surgery",
+				"routine": 4,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0,
 				"root1": "Perception",
-				"values": [1, 1, 1, 0]
+				"root2": "Agility"
+			},
+			{
+				"name": "Conspicuous",
+				"routine": 1,
+				"fate": 0,
+				"persona": 0,
+				"deeds": 0,
+				"root1": "Will"
 			}
 		],
 		"relationships": [

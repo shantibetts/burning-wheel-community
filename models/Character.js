@@ -17,10 +17,66 @@ const characterSchema = new mongoose.Schema({
 	instincts: [{ name: String, description: String }],
 	traits: [{ name: String, description: String, callOn: String }],
 	artha: [],
-	stats: [{ name: String, values: [] }],
-	attributes: [{ name: String, values: [] }],
-	skills: [{ name: String, root1: String, root2: String, values: [] }],
-	skillsLearning: [{ name: String, root1: String, root2: String, values: [] }],
+	stats: [
+		{
+			name: String,
+			shade: String,
+			exponent: Number,
+			tax: Number,
+			routine: Number,
+			difficult: Number,
+			challenging: Number,
+			fate: Number,
+			persona: Number,
+			deeds: Number
+		}
+	],
+	attributes: [
+		{
+			name: String,
+			shade: String,
+			exponent: Number,
+			tax: Number,
+			routine: Number,
+			difficult: Number,
+			challenging: Number,
+			fate: Number,
+			persona: Number,
+			deeds: Number
+		}
+	],
+	skills: [
+		{
+			name: String,
+			shade: String,
+			exponent: Number,
+			tax: Number,
+			routine: Number,
+			difficult: Number,
+			challenging: Number,
+			fate: Number,
+			persona: Number,
+			deeds: Number,
+			root1: String,
+			root2: String
+		}
+	],
+	skillsLearning: [
+		{
+			name: String,
+			shade: String,
+			exponent: Number,
+			tax: Number,
+			routine: Number,
+			difficult: Number,
+			challenging: Number,
+			fate: Number,
+			persona: Number,
+			deeds: Number,
+			root1: String,
+			root2: String
+		}
+	],
 	relationships: [
 		{ name: String, exponent: Number, shade: String, description: String }
 	],
@@ -84,7 +140,16 @@ const characterSchema = new mongoose.Schema({
 			action: String,
 			actionSpeed: Number,
 			shade: String,
-			ammunition: [{ name: String, values: [] }]
+			ammunition: [
+				{
+					name: String,
+					IMS: Number,
+					VA: Number,
+					DoF: [],
+					range: Number,
+					toHit: Number
+				}
+			]
 		}
 	],
 	thrownWeapons: [
