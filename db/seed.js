@@ -6,9 +6,9 @@ const characterSeedData = require('./characterSeed.json')
 User.find().remove(() => {
 	Character.find().remove(() => {
 		let shanti = User.create({
-			firstName: 'Shanti',
-			lastName: 'Betts',
-			userName: 'SBetts'
+			name: 'Shanti Betts',
+			email: 'shanti.betts@gmail.com',
+			password: 'spanky'
 		}).then((user) => {
 			Promise.all([
 				Character.create(characterSeedData[0]).then((character) => {
@@ -23,9 +23,9 @@ User.find().remove(() => {
 			]).then(() => user.save())
 		})
 		let frank = User.create({
-			firstName: 'David',
-			lastName: 'Bennette',
-			userName: 'DBennette'
+			name: 'Shanti Betts2',
+			email: 'shanti.betts2@gmail.com',
+			password: 'spanky2'
 		}).then((user) => {
 			Promise.all([
 				Character.create(characterSeedData[0]).then((character) => {
@@ -40,9 +40,9 @@ User.find().remove(() => {
 			]).then(() => user.save())
 		})
 		let john = User.create({
-			firstName: 'Keshava',
-			lastName: 'Betts',
-			userName: 'MeditatingMan108'
+			name: 'Shanti Betts3',
+			email: 'shanti.betts3@gmail.com',
+			password: 'spanky3'
 		}).then((user) => {
 			Promise.all([
 				Character.create(characterSeedData[0]).then((character) => {

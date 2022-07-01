@@ -25,8 +25,12 @@ router.get('/:id', (req, res) => {
 
 // PATCH character by id
 router.patch('/:id', (req, res) => {
+	console.log(req.body)
 	Character.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(
-		(character) => res.json({ character: character })
+		(character) => {
+			console.log(character)
+			res.json({ character: character })
+		}
 	)
 })
 

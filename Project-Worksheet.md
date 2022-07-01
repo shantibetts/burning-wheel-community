@@ -46,9 +46,9 @@ V1: Create a MongoDB database to house character information that communicates v
 | 6/24    | Fri     | Project Plan & Create Projects               | Complete   |
 | 6/25-26 | Sat/Sun | Character Model / Character API calls        | Complete   |
 | 6/27    | Mon     | Fetch request + React component skeleton     | Complete   |
-| 6/28    | Tue     | Finish back end                              | 80%        |
-| 6/29    | Wed     | Finish front end components                  | 60%        |
-| 6/30    | Thu     | Front end character CRUD integration         | Incomplete |
+| 6/28    | Tue     | Finish back end                              | 90%        |
+| 6/29    | Wed     | Finish front end components                  | 90%        |
+| 6/30    | Thu     | Front end character CRUD integration         | 80%        |
 | 7/1     | Fri     | Users / Authorization                        | Incomplete |
 | 7/2-3   | Sat/Sun | Finish Users / Authorization                 | Incomplete |
 | 7/4     | Mon     | 4th of July Holliday                         | Incomplete |
