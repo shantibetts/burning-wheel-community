@@ -13,13 +13,16 @@ passport.deserializeUser((id, done) => {
 	})
 })
 
-// Google Strategy
+// Local Strategy
 passport.use(
 	new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
+		// May need to add a passwordField: 'password' after username field - does that make it log in only?
+
 		// Find User if existing
-		User.find({ email: email })
+		User.findOne({ email: email })
 			.then((user) => {
-				// Find User if existing
+				console.log(user)
+				// Create new user if none exists
 				if (!user) {
 					const newUser = new User({ email, password })
 					// Hash password before saving in database

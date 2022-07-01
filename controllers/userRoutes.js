@@ -8,7 +8,7 @@ const User = require('../models/user')
 // GET all users
 router.get('/', (req, res) => {
 	User.find()
-		.populate('characters', ['firstName', 'lastName'])
+		.populate('characters', ['characterName', 'game', 'dateCreated', 'isTrash'])
 		.then((users) => res.json({ users: users }))
 })
 
@@ -20,13 +20,13 @@ router.post('/', (req, res) => {
 //GET user by id
 router.get('/:id', (req, res) => {
 	User.findById(req.params.id)
-		.populate('characters', ['firstName', 'lastName'])
+		.populate('characters')
 		.then((user) => res.json({ user: user }))
 })
 
-//GET user by username
-router.get('/username/:username', (req, res) => {
-	User.findOne({ userName: req.params.username })
+//GET user by email
+router.get('/email/:email', (req, res) => {
+	User.findOne({ email: req.params.email })
 		.populate('characters')
 		.then((user) => res.json({ user: user }))
 })
