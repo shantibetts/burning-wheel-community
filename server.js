@@ -26,12 +26,18 @@ app.use(express.urlencoded({ extended: false }))
 // Express Session
 app.use(
 	session({
-		secret: 'Not sure what this is for',
+		secret: 'randome-string-for-hash',
 		resave: false,
 		saveUninitialized: true,
 		store: MongoStore.create({ mongoUrl: process.env.DB_URL })
 	})
 )
+
+app.use((req, res, next) => {
+	console.log('req.session', req.session)
+	return next()
+})
+
 // Passport middleware
 app.use(passport.initialize())
 app.use(passport.session())
