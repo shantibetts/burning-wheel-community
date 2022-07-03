@@ -4,7 +4,7 @@ const passport = require('passport')
 const User = require('./../models/user')
 
 router.post('/login', (req, res, next) => {
-	passport.authenticate('local', (err, user, info) => {
+	passport.authenticate('local', (err, user) => {
 		if (err) {
 			return res.status(400).json({ errors: err })
 		}
@@ -17,18 +17,20 @@ router.post('/login', (req, res, next) => {
 			}
 			return User.findById(user.id)
 				.populate('characters')
-				.then((user) => res.status(200).json({ user: user }))
+				.then((userData) =>
+					res.status(200).json({ user: user, userData: userData })
+				)
 		})
 	})(req, res, next)
 })
 
-// // log in request
-// router.get('/', (req, res) => {
-// 	Character.find().then((characters) => res.json({ characters: characters }))
-// })
-
-router.get('/login', function (req, res, next) {
-	res.render('login')
+router.post('/logout', (req, res) => {
+	if (req.user) {
+		req.logout()
+		res.send({ msg: 'logging out' })
+	} else {
+		res.send({ msg: 'no user to log out' })
+	}
 })
 
 module.exports = router

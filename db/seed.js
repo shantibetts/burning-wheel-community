@@ -15,11 +15,8 @@ let password3 = ''
 
 Promise.all([
 	(password = encryptPassword('spanky')),
-	console.log(encryptPassword('spanky')),
 	(password2 = encryptPassword('spanky2')),
-	console.log(password2),
-	(password3 = encryptPassword('spanky3')),
-	console.log(password3)
+	(password3 = encryptPassword('spanky3'))
 ]).then(() => {
 	User.find().remove(() => {
 		Character.find().remove(() => {
