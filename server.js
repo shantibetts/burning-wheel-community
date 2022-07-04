@@ -5,6 +5,7 @@ const logger = require('morgan')
 const cors = require('cors')
 const MongoStore = require('connect-mongo')
 const mongoose = require('./db/connection')
+const bodyParser = require('body-parser')
 
 // Import routers
 const characterRouter = require('./controllers/characterRoutes')
@@ -19,33 +20,36 @@ const app = express()
 // Add express app middleware
 app.use(express.json())
 app.use(logger('dev'))
-app.use(cors())
+app.use(
+	cors({
+		origin: 'http://localhost:3000',
+		methods: 'GET,POST,PUT,PATCH,DELETE',
+		credentials: true
+	})
+)
 // extended false does not allow nested payloads
-app.use(express.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
 
 // Express Session
 app.use(
 	session({
-		secret: 'randome-string-for-hash',
+		secret: 'random-string-for-hash',
 		resave: false,
-		saveUninitialized: true,
+		saveUninitialized: false,
 		store: MongoStore.create({ mongoUrl: process.env.DB_URL })
 	})
 )
 
-app.use((req, res, next) => {
-	console.log('req.session', req.session)
-	return next()
-})
-
 // Passport middleware
 app.use(passport.initialize())
 app.use(passport.session())
+// *** added by passport docs, no idea what it does, but didn't help authenticate = true
+app.use(passport.authenticate('session'))
 
 // Routes
 app.use('/characters/', characterRouter)
 app.use('/users/', userRouter)
-app.use('/', authRouter)
+app.use('/auth/', authRouter)
 
 app.set('port', process.env.PORT || 8080)
 

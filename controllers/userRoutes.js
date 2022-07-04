@@ -5,6 +5,15 @@ const router = express.Router()
 const Character = require('../models/character')
 const User = require('../models/user')
 
+// Check for authentication
+checkAuthenticated = (req, res, next) => {
+	console.log(req.isAuthenticated())
+	if (req.isAuthenticated()) {
+		return next()
+	}
+	res.status(401).json({ error: 'could not authenticate credentials' })
+}
+
 // GET all users
 router.get('/', (req, res) => {
 	User.find()
@@ -18,7 +27,7 @@ router.post('/', (req, res) => {
 })
 
 //GET user by id
-router.get('/:id', (req, res) => {
+router.get('/:id', checkAuthenticated, (req, res) => {
 	User.findById(req.params.id)
 		.populate('characters')
 		.then((user) => res.json({ user: user }))

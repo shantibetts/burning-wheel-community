@@ -2,6 +2,8 @@ const bcrypt = require('bcryptjs')
 const User = require('../models/user')
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
+const GoogleStrategy = require('passport-google-oauth20').Strategy
+require('dotenv').config()
 
 passport.serializeUser((user, done) => {
 	done(null, user.id)
@@ -53,6 +55,24 @@ passport.use(
 				return done(null, false, { message: err })
 			})
 	})
+)
+
+// Google Strategy
+passport.use(
+	new GoogleStrategy(
+		{
+			clientID: process.env.GOOGLE_CLIENT_ID,
+			clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+			callbackURL: '/auth/google/callback',
+			userProfileURL: 'https://www.googleapis.com/oauth2/v3/userinfo'
+		},
+		function (accessToken, refreshToken, profile, cb) {
+			User.findOne({ email: profile.emails[0].value }, function (err, user) {
+				console.log(user)
+				return cb(err, user)
+			})
+		}
+	)
 )
 
 module.exports = passport

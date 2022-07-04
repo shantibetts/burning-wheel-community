@@ -6,10 +6,11 @@ const Character = require('../models/character')
 
 // Check for authentication
 checkAuthenticated = (req, res, next) => {
+	console.log(req.isAuthenticated())
 	if (req.isAuthenticated()) {
 		return next()
 	}
-	res.redirect('/')
+	res.status(401).json({ error: 'could not authenticate credentials' })
 }
 
 // GET all characters
