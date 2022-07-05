@@ -22,7 +22,7 @@ router.post('/login', (req, res, next) => {
 				res
 					// .status(200)
 					// .json({ succsess: `logged in ${user.name}`, user: user })
-					.redirect(`/users/${user._id}`)
+					.redirect(CLIENT_URL)
 			)
 			// return User.findById(user.id)
 			// 	.populate('characters')
@@ -33,19 +33,22 @@ router.post('/login', (req, res, next) => {
 	})(req, res, next)
 })
 
-router.get('/login/sucess', (req, res) => {
-	if (req.user) {
-		console.log(req)
-		res.json({
-			success: true,
-			message: 'successfull',
-			user: req.user,
-			session: req.session
-		})
-	}
+router.get('/google/login/success', (req, res) => {
+	User.findById(req.user._id)
+		.populate('characters')
+		.then((userData) =>
+			res
+				.json({
+					success: true,
+					message: 'successfull',
+					user: userData,
+					session: req.session
+				})
+				.redirect(CLIENT_URL + `/users/${userData.name}`)
+		)
 })
 
-router.get('/login/failed', (req, res) => {
+router.get('/google/login/failed', (req, res) => {
 	res.status(401).json({ success: false, message: 'login failed' })
 })
 
@@ -58,7 +61,7 @@ router.get(
 	'/google/callback',
 	passport.authenticate('google', {
 		successRedirect: CLIENT_URL,
-		failureRedirect: '/login/failed'
+		failureRedirect: 'login/failed'
 	})
 )
 

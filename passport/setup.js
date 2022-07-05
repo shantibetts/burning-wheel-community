@@ -68,7 +68,6 @@ passport.use(
 		},
 		function (accessToken, refreshToken, profile, cb) {
 			User.findOne({ email: profile.emails[0].value }, function (err, user) {
-				console.log(user)
 				return cb(err, user)
 			})
 		}

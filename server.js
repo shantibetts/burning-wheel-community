@@ -6,6 +6,7 @@ const cors = require('cors')
 const MongoStore = require('connect-mongo')
 const mongoose = require('./db/connection')
 const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
 
 // Import routers
 const characterRouter = require('./controllers/characterRoutes')
@@ -27,6 +28,8 @@ app.use(
 		credentials: true
 	})
 )
+app.use(cookieParser())
+
 // extended false does not allow nested payloads
 app.use(bodyParser.urlencoded({ extended: true }))
 

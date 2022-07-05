@@ -21,6 +21,14 @@ router.get('/', (req, res) => {
 		.then((users) => res.json({ users: users }))
 })
 
+// GET user by logIn
+router.get('/login', checkAuthenticated, (req, res) => {
+	console.log(req.session)
+	User.findById(req.user._id)
+		.populate('characters', ['characterName', 'game', 'dateCreated', 'isTrash'])
+		.then((user) => res.json({ user: user }))
+})
+
 // POST a new user
 router.post('/', (req, res) => {
 	User.create(req.body).then((user) => res.status(201).json({ user: user }))
@@ -28,6 +36,7 @@ router.post('/', (req, res) => {
 
 //GET user by id
 router.get('/:id', checkAuthenticated, (req, res) => {
+	console.log(req.session.passport.user)
 	User.findById(req.params.id)
 		.populate('characters')
 		.then((user) => res.json({ user: user }))
