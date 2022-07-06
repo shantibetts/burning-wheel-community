@@ -5,18 +5,24 @@ const passport = require('passport')
 // Require relevant models.
 const Character = require('../models/character')
 
+// HACK FOR PRESENTATION: UNCOMMENT ORIGIANL FUNCTION
 // Check for authentication
+// checkAuthenticated = (req, res, next) => {
+// 	console.log('Page requested:')
+// 	console.log(req.method)
+// 	console.log(req.session)
+// 	console.log(req.cookies)
+// 	console.log(req.body)
+// 	if (req.isAuthenticated()) {
+// 		return next()
+// 	}
+// 	res.status(401).json({ error: 'could not authenticate credentials' })
+// }
+// DUMMY FUNCTION TO BYPASS AUTH
 checkAuthenticated = (req, res, next) => {
-	console.log('Page requested:')
-	console.log(req.method)
-	console.log(req.session)
-	console.log(req.cookies)
-	console.log(req.body)
-	if (req.isAuthenticated()) {
-		return next()
-	}
-	res.status(401).json({ error: 'could not authenticate credentials' })
+	return next()
 }
+// END HACK
 
 // GET all characters
 router.get('/', (req, res) => {
@@ -37,21 +43,22 @@ router.get('/:id', (req, res) => {
 	)
 })
 
+// HACK FOR PRESENTATION
+// replace checkAuthenticated with
+// passport.authenticate('google', { scope: ['profile', 'email'] })
+// END HACK
+
 // PATCH character by id
-router.patch(
-	'/:id',
-	passport.authenticate('google', { scope: ['profile', 'email'] }),
-	(req, res, next) => {
-		console.log('user is ', req.user)
-		req.body.owner = req.user._id
-		Character.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(
-			(character) => {
-				console.log(character)
-				res.json({ character: character })
-			}
-		)
-	}
-)
+router.patch('/:id', checkAuthenticated, (req, res, next) => {
+	console.log('user is ', req.body)
+	// req.body.owner = req.user._id
+	Character.findByIdAndUpdate(req.params.id, req.body.updateBody, {
+		new: true
+	}).then((character) => {
+		// console.log(character)
+		res.json({ character: character })
+	})
+})
 
 // DELETE character by id
 router.delete('/:id', checkAuthenticated, (req, res) => {

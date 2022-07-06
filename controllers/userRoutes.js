@@ -6,18 +6,24 @@ const passport = require('passport')
 const Character = require('../models/character')
 const User = require('../models/user')
 
+// HACK FOR PRESENTATION: UNCOMMENT ORIGIANL FUNCTION
 // Check for authentication
+// checkAuthenticated = (req, res, next) => {
+// 	console.log('Page requested:')
+// 	console.log(req.method)
+// 	console.log(req.session)
+// 	console.log(req.cookies)
+// 	console.log(req.body)
+// 	if (req.isAuthenticated()) {
+// 		return next()
+// 	}
+// 	res.status(401).json({ error: 'could not authenticate credentials' })
+// }
+// DUMMY FUNCTION TO BYPASS AUTH
 checkAuthenticated = (req, res, next) => {
-	console.log(req.isAuthenticated())
-	console.log('Page requested:')
-	console.log(req.method)
-	console.log(req.session)
-	console.log(req.cookies)
-	if (req.isAuthenticated()) {
-		return next()
-	}
-	res.status(401).json({ error: 'could not authenticate credentials' })
+	return next()
 }
+// END HACK
 
 // GET all users
 router.get('/', (req, res) => {
@@ -26,18 +32,19 @@ router.get('/', (req, res) => {
 		.then((users) => res.json({ users: users }))
 })
 
+// HACK FOR PRESENTATION
+// replace checkAuthenticated with
+// passport.authenticate('google', { scope: ['profile', 'email'] })
+// END HACK
+
 // GET user by logIn
-router.get(
-	'/login',
-	passport.authenticate('google', { scope: ['profile', 'email'] }),
-	(req, res, next) => {
-		console.log('users/Login user:', req.user)
-		req.body.owner = req.user._id
-		User.findById(req.user._id)
-			.populate('characters')
-			.then((userData) => res.json({ user: req.user, userData: userData }))
-	}
-)
+router.get('/login', checkAuthenticated, (req, res, next) => {
+	console.log('users/Login user:', req.user)
+	req.body.owner = req.user._id
+	User.findById(req.user._id)
+		.populate('characters')
+		.then((userData) => res.json({ user: req.user, userData: userData }))
+})
 
 // POST a new user
 router.post('/', (req, res) => {

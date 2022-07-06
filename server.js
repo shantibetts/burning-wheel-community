@@ -28,18 +28,21 @@ const originAllowedList = [
 	'https://accounts.google.com'
 ]
 
-console.log(origin)
 const corsOptions = {
-	methods: 'GET,POST,PUT,PATCH,DELETE,',
+	methods: 'GET,POST,PUT,PATCH,DELETE',
 	credentials: true,
-	origin: function (origin, callback) {
-		console.log(origin)
-		if (originAllowedList.indexOf(origin) !== -1) {
-			callback(null, true)
-		} else {
-			callback(new Error('origin not allowed by CORS'))
-		}
-	}
+	origin: 'http://localhost:3000'
+	// origin: function (origin, callback) {
+	// 	callback(null, true)
+	// presentation HACKS
+	// console.log(origin)
+	// if (originAllowedList.indexOf(origin) !== -1) {
+	// 	callback(null, true)
+	// } else {
+	// 	callback(new Error('origin not allowed by CORS'))
+	// }
+	// END PRESENTATION HACKS
+	// }
 }
 app.use(cors(corsOptions))
 
