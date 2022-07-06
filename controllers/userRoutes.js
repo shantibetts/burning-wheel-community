@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const passport = require('passport')
 
 // Require relevant models.
 const Character = require('../models/character')
@@ -8,6 +9,10 @@ const User = require('../models/user')
 // Check for authentication
 checkAuthenticated = (req, res, next) => {
 	console.log(req.isAuthenticated())
+	console.log('Page requested:')
+	console.log(req.method)
+	console.log(req.session)
+	console.log(req.cookies)
 	if (req.isAuthenticated()) {
 		return next()
 	}
@@ -22,12 +27,17 @@ router.get('/', (req, res) => {
 })
 
 // GET user by logIn
-router.get('/login', checkAuthenticated, (req, res) => {
-	console.log(req.session)
-	User.findById(req.user._id)
-		.populate('characters', ['characterName', 'game', 'dateCreated', 'isTrash'])
-		.then((user) => res.json({ user: user }))
-})
+router.get(
+	'/login',
+	passport.authenticate('google', { scope: ['profile', 'email'] }),
+	(req, res, next) => {
+		console.log('users/Login user:', req.user)
+		req.body.owner = req.user._id
+		User.findById(req.user._id)
+			.populate('characters')
+			.then((userData) => res.json({ user: req.user, userData: userData }))
+	}
+)
 
 // POST a new user
 router.post('/', (req, res) => {

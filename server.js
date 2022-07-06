@@ -21,13 +21,28 @@ const app = express()
 // Add express app middleware
 app.use(express.json())
 app.use(logger('dev'))
-app.use(
-	cors({
-		origin: 'http://localhost:3000',
-		methods: 'GET,POST,PUT,PATCH,DELETE',
-		credentials: true
-	})
-)
+const originAllowedList = [
+	'http://localhost',
+	'http://localhost:3000',
+	'http://localhost:8080',
+	'https://accounts.google.com'
+]
+
+console.log(origin)
+const corsOptions = {
+	methods: 'GET,POST,PUT,PATCH,DELETE,',
+	credentials: true,
+	origin: function (origin, callback) {
+		console.log(origin)
+		if (originAllowedList.indexOf(origin) !== -1) {
+			callback(null, true)
+		} else {
+			callback(new Error('origin not allowed by CORS'))
+		}
+	}
+}
+app.use(cors(corsOptions))
+
 app.use(cookieParser())
 
 // extended false does not allow nested payloads
@@ -53,6 +68,8 @@ app.use(passport.authenticate('session'))
 app.use('/characters/', characterRouter)
 app.use('/users/', userRouter)
 app.use('/auth/', authRouter)
+
+console.log(session)
 
 app.set('port', process.env.PORT || 8080)
 

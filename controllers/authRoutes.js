@@ -42,7 +42,8 @@ router.get('/google/login/success', (req, res) => {
 					success: true,
 					message: 'successfull',
 					user: userData,
-					session: req.session
+					session: req.session,
+					cookies: req.cookies
 				})
 				.redirect(CLIENT_URL + `/users/${userData.name}`)
 		)
@@ -66,12 +67,13 @@ router.get(
 )
 
 router.post('/logout', (req, res) => {
-	if (req.user) {
-		req.logout()
-		res.send({ msg: 'logging out' })
-	} else {
-		res.send({ msg: 'no user to log out' })
-	}
+	req.logout(function (err) {
+		req.session.destroy()
+		if (err) {
+			return res.json({ success: false, message: err })
+		}
+		res.json({ success: true, message: 'user logged out' })
+	})
 })
 
 module.exports = router
