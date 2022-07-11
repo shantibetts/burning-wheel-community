@@ -1,5 +1,5 @@
 //import connection
-const mongoose = require('../db/connection')
+const mongoose = require('./../db/connection')
 
 // New schema for charactesr
 const characterSchema = new mongoose.Schema({

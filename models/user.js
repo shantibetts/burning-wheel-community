@@ -1,5 +1,5 @@
 //Import connection
-const mongoose = require('../db/connection')
+const mongoose = require('./../db/connection')
 
 const ThirdPartyProviderSchema = new mongoose.Schema({
 	provider_name: {
