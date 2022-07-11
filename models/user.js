@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema(
 		name: String,
 		email: { type: String, required: true, unique: true },
 		email_is_verified: { type: Boolean, default: false },
-		password: String,
+		password: { type: String, select: false },
 		characters: [
 			{
 				ref: 'Character',

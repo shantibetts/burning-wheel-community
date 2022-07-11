@@ -40,10 +40,12 @@ router.get('/', (req, res) => {
 // GET user by logIn
 router.get('/login', checkAuthenticated, (req, res, next) => {
 	console.log('users/Login user:', req.user)
+	// What is req.body.owner? Why is this set here?
 	req.body.owner = req.user._id
+	// Find's user by req.user._id and returns user with characters
 	User.findById(req.user._id)
 		.populate('characters')
-		.then((userData) => res.json({ user: req.user, userData: userData }))
+		.then((userData) => res.json({ user: userData }))
 })
 
 // POST a new user
