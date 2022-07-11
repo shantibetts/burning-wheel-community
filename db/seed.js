@@ -1,5 +1,5 @@
-const User = require('./../models/user.js')
-const Character = require('./../models/character.js')
+const User = require('../models/user.js')
+const Character = require('../models/character.js')
 const bcrypt = require('bcryptjs')
 
 const characterSeedData = require('./characterSeed.json')

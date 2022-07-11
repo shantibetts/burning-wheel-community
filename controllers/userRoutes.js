@@ -3,8 +3,8 @@ const router = express.Router()
 const passport = require('passport')
 
 // Require relevant models.
-const Character = require('./../models/character')
-const User = require('./../models/user')
+const Character = require('../models/character')
+const User = require('../models/user')
 
 // HACK FOR PRESENTATION: UNCOMMENT ORIGIANL FUNCTION
 // Check for authentication
