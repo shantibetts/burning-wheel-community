@@ -20,6 +20,7 @@ passport.use(
 	new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
 		// Find User if existing
 		User.findOne({ email: email })
+			.select('+password')
 			.then((user) => {
 				// Create new user if none exists
 				if (!user) {
