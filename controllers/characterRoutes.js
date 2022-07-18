@@ -7,23 +7,23 @@ const Character = require('./../models/character')
 
 // HACK FOR PRESENTATION: UNCOMMENT ORIGIANL FUNCTION
 // Check for authentication
-checkAuthenticated = (req, res, next) => {
-	console.log('Page requested:')
-	console.log('method requested:', req.method)
-	console.log('session requested:', req.session)
-	console.log('cookies requested:', req.cookies)
-	console.log('body requested:', req.body)
-	console.log('is Authenticated:', req.isAuthenticated())
-	if (req.isAuthenticated()) {
-		return next()
-	}
-	res.status(401).json({ error: 'could not authenticate credentials' })
-}
+// checkAuthenticated = (req, res, next) => {
+// 	console.log('Page requested:')
+// 	console.log('method requested:', req.method)
+// 	console.log('session requested:', req.session)
+// 	console.log('cookies requested:', req.cookies)
+// 	console.log('body requested:', req.body)
+// 	console.log('is Authenticated:', req.isAuthenticated())
+// 	if (req.isAuthenticated()) {
+// 		return next()
+// 	}
+// 	res.status(401).json({ error: 'could not authenticate credentials' })
+// }
 
 // DUMMY FUNCTION TO BYPASS AUTH
-// checkAuthenticated = (req, res, next) => {
-// 	return next()
-// }
+checkAuthenticated = (req, res, next) => {
+	return next()
+}
 // END HACK
 
 // GET all characters

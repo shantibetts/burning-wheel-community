@@ -1,6 +1,7 @@
 const User = require('./../models/user.js')
 const Character = require('./../models/character.js')
 const bcrypt = require('bcryptjs')
+const mongoose = require('./../db/connection')
 
 const characterSeedData = require('./characterSeed.json')
 
@@ -18,8 +19,8 @@ Promise.all([
 	(password2 = encryptPassword('spanky2')),
 	(password3 = encryptPassword('test1'))
 ]).then(() => {
-	User.find().remove(() => {
-		Character.find().remove(() => {
+	User.deleteMany(() => {
+		Character.deleteMany(() => {
 			let shanti = User.create({
 				name: 'Shanti Betts',
 				email: 'shanti.betts@gmail.com',
@@ -55,7 +56,7 @@ Promise.all([
 				]).then(() => user.save())
 			})
 			let john = User.create({
-				name: 'Test User',
+				name: 'Example User',
 				email: 'test@test.com',
 				password: password3
 			}).then((user) => {
@@ -69,7 +70,9 @@ Promise.all([
 					Character.create(characterSeedData[2]).then((character) => {
 						user.characters.push(character)
 					})
-				]).then(() => user.save())
+				])
+					.then(() => user.save())
+					.then(() => mongoose.disconnect())
 			})
 		})
 	})
