@@ -18,62 +18,62 @@ Promise.all([
 	(password = encryptPassword('spanky')),
 	(password2 = encryptPassword('spanky2')),
 	(password3 = encryptPassword('test1'))
-]).then(() => {
-	User.deleteMany(() => {
-		Character.deleteMany(() => {
-			let shanti = User.create({
-				name: 'Shanti Betts',
-				email: 'shanti.betts@gmail.com',
-				password: password
-			}).then((user) => {
-				Promise.all([
-					Character.create(characterSeedData[0]).then((character) => {
-						user.characters.push(character)
-					}),
-					Character.create(characterSeedData[1]).then((character) => {
-						user.characters.push(character)
-					}),
-					Character.create(characterSeedData[2]).then((character) => {
-						user.characters.push(character)
-					})
-				]).then(() => user.save())
-			})
-			let frank = User.create({
-				name: 'Shanti Betts Clone',
-				email: 'clone@gmail.com',
-				password: password2
-			}).then((user) => {
-				Promise.all([
-					Character.create(characterSeedData[0]).then((character) => {
-						user.characters.push(character)
-					}),
-					Character.create(characterSeedData[1]).then((character) => {
-						user.characters.push(character)
-					}),
-					Character.create(characterSeedData[2]).then((character) => {
-						user.characters.push(character)
-					})
-				]).then(() => user.save())
-			})
-			let john = User.create({
-				name: 'Example User',
-				email: 'test@test.com',
-				password: password3
-			}).then((user) => {
-				Promise.all([
-					Character.create(characterSeedData[0]).then((character) => {
-						user.characters.push(character)
-					}),
-					Character.create(characterSeedData[1]).then((character) => {
-						user.characters.push(character)
-					}),
-					Character.create(characterSeedData[2]).then((character) => {
-						user.characters.push(character)
-					})
-				])
-					.then(() => user.save())
-					.then(() => mongoose.disconnect())
-			})
+])
+	.then(() => User.deleteMany())
+	.then(() => Character.deleteMany())
+	.then(() => {
+		let shanti = User.create({
+			name: 'Shanti Test3',
+			email: 'shanti.betts@gmail.com',
+			password: password
+		}).then((user) => {
+			Promise.all([
+				Character.create(characterSeedData[0]).then((character) => {
+					user.characters.push(character)
+				}),
+				Character.create(characterSeedData[1]).then((character) => {
+					user.characters.push(character)
+				}),
+				Character.create(characterSeedData[2]).then((character) => {
+					user.characters.push(character)
+				})
+			]).then(() => user.save())
+		})
+		let frank = User.create({
+			name: 'Shanti Betts Clone',
+			email: 'clone@gmail.com',
+			password: password2
+		}).then((user) => {
+			Promise.all([
+				Character.create(characterSeedData[0]).then((character) => {
+					user.characters.push(character)
+				}),
+				Character.create(characterSeedData[1]).then((character) => {
+					user.characters.push(character)
+				}),
+				Character.create(characterSeedData[2]).then((character) => {
+					user.characters.push(character)
+				})
+			]).then(() => user.save())
+		})
+		let john = User.create({
+			name: 'Example User',
+			email: 'test@test.com',
+			password: password3
+		}).then((user) => {
+			Promise.all([
+				Character.create(characterSeedData[0]).then((character) => {
+					user.characters.push(character)
+				}),
+				Character.create(characterSeedData[1]).then((character) => {
+					user.characters.push(character)
+				}),
+				Character.create(characterSeedData[2]).then((character) => {
+					user.characters.push(character)
+				})
+			])
+				.then(() => user.save())
+				.then(() => process.exit())
 		})
 	})
-})
+// .then(() => mongoose.disconnect())
