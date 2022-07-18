@@ -31,7 +31,7 @@ const originAllowedList = [
 const corsOptions = {
 	methods: 'GET,POST,PUT,PATCH,DELETE',
 	credentials: true,
-	origin: 'http://localhost:3000'
+	origin: process.env.CORS_ORIGIN
 	// origin: function (origin, callback) {
 	// 	callback(null, true)
 	// presentation HACKS
