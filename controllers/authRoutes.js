@@ -18,12 +18,11 @@ router.post('/local', (req, res, next) => {
 			if (err) {
 				return res.status(400).json({ errors: err })
 			}
-			console.log(user)
 			// return res
 			// .status(200)
 			// .json({ succsess: `logged in ${user.name}`, user: user })
 			// .redirect(CLIENT_URL)
-			return User.findById(user.id)
+			return User.findById(user)
 				.populate('characters')
 				.then((userData) => res.status(200).json({ userData: userData }))
 		})
@@ -50,6 +49,10 @@ router.get('/google/login/failed', (req, res) => {
 	res.status(401).json({ success: false, message: 'login failed' })
 })
 
+router.get('/sessions', (req, res) => {
+	res.status(200).json({ success: false, message: 'login failed' })
+})
+
 // Click log in with google, hits this route
 router.get(
 	'/google',
@@ -71,9 +74,16 @@ router.get(
 // The log-out button hits this route
 router.post('/logout', (req, res) => {
 	// This SHOULD remove the passport headers
-	req.logout(function (err) {
+	console.log(req.session)
+	console.log('user', req.user)
+	console.log('isAuthenticated', req.isAuthenticated)
+	req.logout((err) => {
 		// This SHOULD remove the current DB session
-		req.session.destroy()
+		req.session.destroy((err) => {
+			if (err) {
+				return res.json({ success: false, message: err })
+			}
+		})
 		if (err) {
 			return res.json({ success: false, message: err })
 		}

@@ -5,15 +5,30 @@ const LocalStrategy = require('passport-local').Strategy
 const GoogleStrategy = require('passport-google-oauth20').Strategy
 require('dotenv').config()
 
-passport.serializeUser((user, done) => {
-	done(null, user.id)
+passport.serializeUser((id, done) => {
+	done(null, id)
 })
 
+// REPLACED with below to try to pull user data out of STORE
 passport.deserializeUser((id, done) => {
 	User.findById(id, (err, user) => {
 		done(err, user)
 	})
 })
+
+// Seems to pull same user as above
+// passport.deserializeUser((req, user, done) => {
+// 	store.findUser(null, { userName: user.email }, async (err, existingUser) => {
+// 		if (err) {
+// 			return done(err)
+// 		}
+// 		if (existingUser) {
+// 			return done(null, existingUser) // return valid object if user exists in our database
+// 		} else {
+// 			return done(null, false) // return false if user doesn't exists
+// 		}
+// 	})
+// })
 
 // Local Strategy
 passport.use(
@@ -33,7 +48,7 @@ passport.use(
 							newUser
 								.save()
 								.then((user) => {
-									return done(null, user)
+									return done(null, user._id)
 								})
 								.catch((err) => {
 									return done(null, false, { message: err })
@@ -45,7 +60,7 @@ passport.use(
 					bcrypt.compare(password, user.password, (err, isMatch) => {
 						if (err) throw err
 						if (isMatch) {
-							return done(null, user)
+							return done(null, user._id)
 						} else {
 							return done(null, false, { message: 'Wrong password' })
 						}
@@ -69,7 +84,7 @@ passport.use(
 		},
 		function (accessToken, refreshToken, profile, cb) {
 			User.findOne({ email: profile.emails[0].value }, function (err, user) {
-				return cb(err, user)
+				return cb(err, user._id)
 			})
 		}
 	)

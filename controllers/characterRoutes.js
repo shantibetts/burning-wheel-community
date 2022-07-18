@@ -9,10 +9,11 @@ const Character = require('./../models/character')
 // Check for authentication
 checkAuthenticated = (req, res, next) => {
 	console.log('Page requested:')
-	console.log(req.method)
-	console.log(req.session)
-	console.log(req.cookies)
-	console.log(req.body)
+	console.log('method requested:', req.method)
+	console.log('session requested:', req.session)
+	console.log('cookies requested:', req.cookies)
+	console.log('body requested:', req.body)
+	console.log('is Authenticated:', req.isAuthenticated())
 	if (req.isAuthenticated()) {
 		return next()
 	}

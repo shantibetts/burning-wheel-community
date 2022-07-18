@@ -55,9 +55,11 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(
 	session({
 		secret: 'random-string-for-hash',
-		resave: false,
-		saveUninitialized: false,
-		store: MongoStore.create({ mongoUrl: process.env.DB_URL })
+		resave: true,
+		saveUninitialized: true,
+		unset: 'destroy',
+		store: MongoStore.create({ mongoUrl: process.env.DB_URL }),
+		cookie: { maxAge: 360000, secure: false }
 	})
 )
 
@@ -71,8 +73,6 @@ app.use(passport.authenticate('session'))
 app.use('/characters/', characterRouter)
 app.use('/users/', userRouter)
 app.use('/auth/', authRouter)
-
-console.log(session)
 
 app.set('port', process.env.PORT || 8080)
 

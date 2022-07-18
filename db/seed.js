@@ -16,7 +16,7 @@ let password3 = ''
 Promise.all([
 	(password = encryptPassword('spanky')),
 	(password2 = encryptPassword('spanky2')),
-	(password3 = encryptPassword('spanky3'))
+	(password3 = encryptPassword('test1'))
 ]).then(() => {
 	User.find().remove(() => {
 		Character.find().remove(() => {
@@ -55,8 +55,8 @@ Promise.all([
 				]).then(() => user.save())
 			})
 			let john = User.create({
-				name: 'Shanti Betts Clone 2',
-				email: 'clone2@gmail.com',
+				name: 'Test User',
+				email: 'test@test.com',
 				password: password3
 			}).then((user) => {
 				Promise.all([
