@@ -23,7 +23,7 @@ Promise.all([
 	.then(() => Character.deleteMany())
 	.then(() => {
 		let shanti = User.create({
-			name: 'Shanti Test3',
+			name: 'Shanti Betts',
 			email: 'shanti.betts@gmail.com',
 			password: password
 		}).then((user) => {
