@@ -1,9 +1,8 @@
 [
 	{
-		"characterName": "William Buckley",
+		"name": "William Buckley",
+		"user_id": "62f2ea87bb4d1491f1646c30",
 		"game": "Omnisiah",
-		"dateCreated": "2022-06-11",
-		"dateEdited": "2022-06-06",
 		"isTrash": false,
 		"stock": "man",
 		"age": 28,
