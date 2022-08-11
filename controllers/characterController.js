@@ -43,8 +43,7 @@ const createCharacter = async (req, res) => {
 	try {
 		const user_id = req.user._id
 		const newCharacter = { user_id, ...req.body }
-		console.log(newCharacter.user_id)
-		const character = await Character.create(req.body)
+		const character = await Character.create(newCharacter)
 		res.status(200).json(character)
 	} catch (error) {
 		res.status(400).json({ error: error.message })

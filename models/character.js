@@ -5,12 +5,12 @@ const mongoose = require('mongoose')
 const characterSchema = new mongoose.Schema(
 	{
 		user_id: {
-			type: String,
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'User',
 			required: true
 		},
 		name: {
-			type: mongoose.Schema.Types.ObjectId,
-			ref: 'User',
+			type: String,
 			required: true
 		},
 		portrait: String,
