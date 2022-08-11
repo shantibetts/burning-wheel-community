@@ -42,6 +42,8 @@ const createCharacter = async (req, res) => {
 	// add character to db and return created character
 	try {
 		const user_id = req.user._id
+		const newCharacter = { user_id, ...req.body }
+		console.log(newCharacter.user_id)
 		const character = await Character.create(req.body)
 		res.status(200).json(character)
 	} catch (error) {
