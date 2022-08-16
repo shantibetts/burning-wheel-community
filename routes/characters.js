@@ -4,9 +4,11 @@ const {
 	getCharacters,
 	getCharacter,
 	deleteCharacter,
-	updateCharacter
+	updateCharacter,
+	updateAttribute
 } = require('./../controllers/characterController')
 const requireAuth = require('../middleware/requireAuth')
+const Character = require('./../models/character')
 
 const router = express.Router()
 
@@ -14,6 +16,16 @@ const router = express.Router()
 router.use(requireAuth)
 
 // GET all characters
+router.get('/allCharacters', (req, res) => {
+	Character.find()
+		.sort({ name: 1 })
+		.then((characterList) => {
+			// return characters
+			res.status(200).json({ characterList })
+		})
+})
+
+// GET CharacterList by userId
 router.get('/', getCharacters)
 
 //GET a single character
@@ -27,5 +39,8 @@ router.delete('/:id', deleteCharacter)
 
 // UPDATE a character
 router.patch('/:id', updateCharacter)
+
+// UPDATE a character attribute
+router.patch('/:id/:attribute/:attributeId', updateAttribute)
 
 module.exports = router
