@@ -28,7 +28,7 @@ const getCharacter = async (req, res) => {
 		return res.status(404).json({ error: 'No such character' })
 	}
 	// return character
-	res.status(200).json(character)
+	res.status(200).json({ character })
 }
 
 // POST a new character
@@ -44,7 +44,7 @@ const createCharacter = async (req, res) => {
 		const user_id = req.user._id
 		const newCharacter = { user_id, ...req.body }
 		const character = await Character.create(newCharacter)
-		res.status(200).json(character)
+		res.status(200).json({ character })
 	} catch (error) {
 		res.status(400).json({ error: error.message })
 	}
@@ -65,7 +65,7 @@ const deleteCharacter = async (req, res) => {
 		return res.status(400).json({ error: 'No such character' })
 	}
 	// send back deleted character
-	res.status(200).json(character)
+	res.status(200).json({ character })
 }
 
 // PATCH a character by id
@@ -84,9 +84,8 @@ const updateCharacter = async (req, res) => {
 	if (!character) {
 		return res.status(400).json({ error: 'No such character' })
 	}
-	console.log(character.stats)
 	// send back updated character
-	res.status(200).json(character)
+	res.status(200).json({ character })
 }
 
 // PATCH an attribute by id
@@ -111,7 +110,7 @@ const updateAttribute = async (req, res) => {
 		return res.status(400).json({ error: 'No such character' })
 	}
 	// send back updated character
-	res.status(200).json(character)
+	res.status(200).json({ character })
 }
 
 module.exports = {
