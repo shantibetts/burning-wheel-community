@@ -23,7 +23,7 @@ const characterSchema = new mongoose.Schema(
 			{ name: String, description: String, action: String, isActive: Boolean }
 		],
 		instincts: [{ name: String, description: String }],
-		traits: [{ name: String, description: String, callOn: String }],
+		traits: [{ name: String, description: String, effect: String }],
 		artha: [],
 		stats: [
 			{
