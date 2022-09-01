@@ -1,6 +1,7 @@
 const express = require('express')
 require('dotenv').config()
 const mongoose = require('mongoose')
+const path = require('path')
 
 // Import routers
 const characterRouter = require('./routes/characters')
@@ -16,6 +17,13 @@ app.use(express.json())
 app.use((req, res, next) => {
 	console.log(req.path, req.method)
 	next()
+})
+
+// Front-end Routes
+app.use(express.static(path.resolve(__dirname, './client/build')))
+// Step 2:
+app.get('*', function (request, response) {
+	response.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
 })
 
 // Routes
