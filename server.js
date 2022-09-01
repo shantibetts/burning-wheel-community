@@ -19,6 +19,10 @@ app.use((req, res, next) => {
 	next()
 })
 
+// Routes
+app.use('/api/characters/', characterRouter)
+app.use('/api/user/', userRouter)
+
 // Front-end Routes
 app.use(express.static(path.resolve(__dirname, './client/build')))
 // Step 2:
@@ -26,11 +30,7 @@ app.get('*', function (request, response) {
 	response.sendFile(path.resolve(__dirname, './client/build', 'index.html'))
 })
 
-// Routes
-app.use('/api/characters/', characterRouter)
-app.use('/api/user/', userRouter)
-
-// connect to db
+// connect to db & run server
 mongoose
 	.connect(process.env.DB_URL)
 	.then(() => {
