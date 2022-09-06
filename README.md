@@ -1,109 +1,37 @@
-# Welcome to the Tracker-API
+# Welcome to the Burning Wheel CharSheet Fullstack MERN App
 
-![Burning Wheel Character Sheet](#)
+[Burning Wheel Character Sheet](https://burning-wheel-community.herokuapp.com/)
 
 ---
 
-## About Burning Wheel Character Sheet
+## What is Burning Wheel?
 
-Tracker is an interactive app that tracks bugs/issues and can assign them to users for comments and resolution. A clean, modern interface using MUI components and reactive styling to provide a seamless mobile-first experience. This API supports the usage of our front-end and mobile application including <a href="https://nodejs.org/en/about/" target="_blank">Node.js</a>, <a href="https://www.mongodb.com/what-is-mongodb" target="_blank">MongoDB</a>, <a href="https://expressjs.com/">Express</a>, and <a href="https://www.heroku.com/what" target="_blank">Heroku</a>.
+Burning Wheel is an award-winning fantasy roleplaying game in which players take on the roles of vibrant, dynamic characters whose very beliefs propel the story forward. Starting with a simple D6 dice pool mechanic, this game intuitively builds on its core concepts. The rules detail dramatic systems for task resolution, advancement, trials of belief, tests of nerve, searing social conflict, dangerous sorcery, miraculous faith, and brutal, gut-wrenching martial combat.
+
+## Why the Burning Wheel CharSheet?
+
+For all but the simplest role playing games, tracking changes to characters is usually something between a headache and a chore! The complexity and character-driven nature of Burning Wheel makes it all the more difficult, and can often lead to critical minutes of game time lost to paging through the books looking up rules about how the current situation and the character's circumstances affect their next role. The Burning Wheel CharSheet is an attempt to automate and integrate those calculations, while displaying all of their critical information in an intuitive and powerful way.
+
+The Burning Wheel Charsheet utilizes a clean, modern interface using MUI components and reactive styling to provide a seamless mobile-first experience. This is built using the MERN stack: <a href="https://www.mongodb.com/what-is-mongodb" target="_blank">MongoDB</a>, <a href="https://expressjs.com/">Express</a>, <a href="https://reactjs.org/">React</a> and <a href="https://nodejs.org/en/about/">Node</a>, and is hosted on <a href="https://www.heroku.com/what" target="_blank">Heroku</a>.
 
 ### Instructions
 
 ---
 
 <details><summary>Prerequisites</summary>
-<p>Nodemon</p></details>
- 
-In order to use the tracker API start by following these steps to get started.
+<p>Nodemon</p>
+<p>MongoDb</p>
+</details>
+
+In order to create a local version of the Burning Wheel CharSheet start by following these steps to get started.
 
 1. Fork and clone the repository.
 2. Change into the new directory.
 3. Intall dependencies by running `npm install` inside the terminal.
-4. Run `nodemon server.js` inside the terminal to start it.
+4. Change into the /client directory.
+5. Install react dependencies by running `npm install` inside the terminal
+6. Create a static build folder for the react client by running `npm run build`
+7. Change back to the project root directory
+8. Run `npm run develop` inside the terminal to start it.
 
-### API specification
-
----
-
-**Bug Model**
-
-- bugName: String
-- Issues: String
-- Priority: Number(1,2,3)
-- timeEstimate: Number
-- dateDue: Date
-- createdDate: Date
-- Comment:[{comment db reference}] <- (add, but implement post MVP)
-- Assigned: {link to user db}
-
-  <a href="https://vast-tundra-01728.herokuapp.com/bugs" target="_blank">Example Bugs</a>
-
-  **User Model**
-
-- userName: String
-- firstName: String
-- lastName: String
-- Bugs: {db bugs reference}
-
-  <a href="https://vast-tundra-01728.herokuapp.com/users" target="_blank">Example Users</a>
-
----
-
-### **Bug Controller**
-
-Create, Read, Update, Destroy (CRUD)
-
-| Verb   | Route   | Action  | Description                  |
-| ------ | ------- | ------- | ---------------------------- | --- | --- | --- |
-| GET    | /       | index   | Show all bugs                | --- | --- |
-| POST   | /       | new     | Add a new bug                | --- | --- | --- |
-| PATCH  | /:bugid | update  | Update an existing bug by ID | --- | --- | --- |
-| DELETE | /:bugid | destroy | Delete a bug by ID           | --- | --- |
-
-### **User Controller**
-
-| Verb  | Route           | Action | Description                                      |
-| ----- | --------------- | ------ | ------------------------------------------------ |
-| GET   | /               | index  | Show all users                                   |
-| PATCH | /:userid:/bugid | update | Update an existing user by ID to add a bug by ID |
-
-## Code Snippet
-
----
-
-```
-// Write the route to update an user
-router.patch('/:userId/bugs/:bugsId', (req, res) => {
-	Bug.findByIdAndUpdate(
-		req.params.bugsId,
-		{ user: req.params.userId },
-		{ new: true }
-	)
-		.populate('user', ['userName', 'firstName', 'lastName'])
-		.then((bug) => {
-			console.log(bug)
-			User.findByIdAndUpdate(
-				req.params.userId,
-				{ $push: { bugs: req.params.bugsId } },
-				{ new: true }
-			)
-				.populate('bugs', [
-					'bugName',
-					'issues',
-					'priority',
-					'timeEstimate',
-					'dateDue',
-					'dateCreated',
-					'assigned',
-					'isActive'
-				])
-				.then((user) => {
-					res.status(200).json({ user: user })
-					console.log(user)
-				})
-		})
-})
-```
-
-[Back to top](#welcome-to-the-tracker-api)<a name="section_name"></a>
+[Back to top](#welcome-to-Burning-Wheel-Charsheet)<a name="section_name"></a>
