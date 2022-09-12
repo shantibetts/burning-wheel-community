@@ -1,4 +1,3 @@
-//import connection
 const mongoose = require('mongoose')
 
 // New schema for charactesr
