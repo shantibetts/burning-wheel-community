@@ -18,10 +18,8 @@ const characterSchema = new mongoose.Schema(
 		stock: String,
 		age: Number,
 		lifepaths: [{ name: String, setting: String }],
-		beliefs: [
-			{ name: String, description: String, action: String, isActive: Boolean }
-		],
-		instincts: [{ name: String, description: String }],
+		beliefs: [{ description: String, action: String, isActive: Boolean }],
+		instincts: [{ description: String }],
 		traits: [{ name: String, description: String, effect: String }],
 		artha: [],
 		stats: [
