@@ -1,7 +1,8 @@
 const express = require('express')
 const {
+	getGlobalCharacterList,
 	createCharacter,
-	getCharacters,
+	getCharacterList,
 	getCharacter,
 	deleteCharacter,
 	updateCharacter,
@@ -16,17 +17,10 @@ const router = express.Router()
 router.use(requireAuth)
 
 // GET all characters
-router.get('/allCharacters', (req, res) => {
-	Character.find()
-		.sort({ name: 1 })
-		.then((characterList) => {
-			// return characters
-			res.status(200).json({ characterList })
-		})
-})
+router.get('/allCharacters', getGlobalCharacterList)
 
 // GET CharacterList by userId
-router.get('/', getCharacters)
+router.get('/', getCharacterList)
 
 //GET a single character
 router.get('/:id', getCharacter)

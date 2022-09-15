@@ -3,8 +3,19 @@ const Character = require('../models/character')
 
 const mongoose = require('mongoose')
 
-// GET all characters
-const getCharacters = async (req, res) => {
+// GET all characters globally
+
+const getGlobalCharacterList = async (req, res) => {
+	Character.find()
+		.sort({ name: 1 })
+		.then((characterList) => {
+			// return character list
+			res.status(200).json({ characterList })
+		})
+}
+
+// GET all characters by user id
+const getCharacterList = async (req, res) => {
 	// get user id from request
 	const user_id = req.user._id
 	// get characters with that user id
@@ -114,7 +125,8 @@ const updateAttribute = async (req, res) => {
 }
 
 module.exports = {
-	getCharacters,
+	getGlobalCharacterList,
+	getCharacterList,
 	getCharacter,
 	createCharacter,
 	deleteCharacter,
